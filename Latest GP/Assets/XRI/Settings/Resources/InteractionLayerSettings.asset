@@ -15,21 +15,21 @@ MonoBehaviour:
   m_LayerNames:
   - Default
   - interactable
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - whole piece
+  - shelf
+  - bar
+  - door
+  - door nob
+  - cylinder
+  - bar
+  - fender
+  - pipe
+  - tire
+  - big block
+  - lamp
+  - seat
+  - spring
+  - rim
   - 
   - 
   - 
