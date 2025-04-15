@@ -67,8 +67,10 @@ erDiagram
     long BuildPieceId2 FK
     string uniqueName2 FK
   }
-  BuildPieceLink ||--|{ BuildPiece: linked_to
-  BuildPieceLink ||--|{ Link: linked_through
+  BuildPieceLink ||--|{ BuildPiece: linked_by1
+  BuildPieceLink ||--|{ BuildPiece: linked_by2
+  BuildPieceLink ||--|{ Link: is1
+  BuildPieceLink ||--|{ Link: is2
 
   Piece {
     long id PK
