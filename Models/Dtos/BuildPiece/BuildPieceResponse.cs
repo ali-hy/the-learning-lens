@@ -1,4 +1,5 @@
-﻿using Models.Dtos.Piece;
+﻿using Models.Dtos.BuildPieceSocket;
+using Models.Dtos.Piece;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Models.Dtos.BuildPiece
     public class BuildPieceResponse
     {
         public long Id { get; set; }
-        public PieceResponse Piece { get; set; }
+        public PieceResponse Piece { get; set; } = null!;
+        public IList<BuildPieceSocketResponse> Sockets { get; set; } = null!;
     }
 }
