@@ -12,8 +12,8 @@ using WebApp.Helpers;
 namespace WebApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250413180656_AddBuildModel")]
-    partial class AddBuildModel
+    [Migration("20250415122735_AddBuildEntity")]
+    partial class AddBuildEntity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -136,7 +136,13 @@ namespace WebApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long>("FirstPieceId")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("FirstPieceId")
+                        .IsUnique();
 
                     b.ToTable("Builds");
                 });
@@ -157,15 +163,14 @@ namespace WebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BuildId")
-                        .IsUnique();
+                    b.HasIndex("BuildId");
 
                     b.HasIndex("PieceId");
 
                     b.ToTable("BuildPieces");
                 });
 
-            modelBuilder.Entity("WebApp.Models.BuildPieceLink", b =>
+            modelBuilder.Entity("WebApp.Models.BuildPieceSocket", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -173,25 +178,23 @@ namespace WebApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("InLinkName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("InPieceId")
+                    b.Property<long>("HoldingBuildPieceId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("OutLinkName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<long>("OnBuildPieceId")
+                        .HasColumnType("bigint");
 
-                    b.Property<long>("OutPieceId")
+                    b.Property<long>("SocketTypeId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("InPieceId");
+                    b.HasIndex("HoldingBuildPieceId")
+                        .IsUnique();
 
-                    b.HasIndex("OutPieceId");
+                    b.HasIndex("OnBuildPieceId");
+
+                    b.HasIndex("SocketTypeId");
 
                     b.ToTable("BuildPiecesLink");
                 });
@@ -224,8 +227,6 @@ namespace WebApp.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ModuleId");
 
                     b.ToTable("LearningTasks");
                 });
@@ -280,9 +281,6 @@ namespace WebApp.Migrations
                     b.Property<long>("PrefabId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("TaskId")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PrefabId");
@@ -290,7 +288,7 @@ namespace WebApp.Migrations
                     b.ToTable("Pieces");
                 });
 
-            modelBuilder.Entity("WebApp.Models.PieceLink", b =>
+            modelBuilder.Entity("WebApp.Models.PieceSocket", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -298,21 +296,19 @@ namespace WebApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<long?>("InPieceId")
-                        .HasColumnType("bigint");
+                    b.Property<string>("JsonDescription")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("OutPieceId")
+                    b.Property<long>("PieceId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("InPieceId");
-
-                    b.HasIndex("OutPieceId");
+                    b.HasIndex("PieceId");
 
                     b.ToTable("PieceLinks");
                 });
@@ -518,12 +514,23 @@ namespace WebApp.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("WebApp.Models.Build", b =>
+                {
+                    b.HasOne("WebApp.Models.BuildPiece", "FirstPiece")
+                        .WithOne()
+                        .HasForeignKey("WebApp.Models.Build", "FirstPieceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("FirstPiece");
+                });
+
             modelBuilder.Entity("WebApp.Models.BuildPiece", b =>
                 {
                     b.HasOne("WebApp.Models.Build", "Build")
-                        .WithOne("FirstPiece")
-                        .HasForeignKey("WebApp.Models.BuildPiece", "BuildId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany("Pieces")
+                        .HasForeignKey("BuildId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("WebApp.Models.Piece", "Piece")
@@ -537,34 +544,31 @@ namespace WebApp.Migrations
                     b.Navigation("Piece");
                 });
 
-            modelBuilder.Entity("WebApp.Models.BuildPieceLink", b =>
+            modelBuilder.Entity("WebApp.Models.BuildPieceSocket", b =>
                 {
-                    b.HasOne("WebApp.Models.BuildPiece", "InPiece")
-                        .WithMany("InLinks")
-                        .HasForeignKey("InPieceId")
+                    b.HasOne("WebApp.Models.BuildPiece", "HoldingBuildPiece")
+                        .WithOne("HeldIn")
+                        .HasForeignKey("WebApp.Models.BuildPieceSocket", "HoldingBuildPieceId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("WebApp.Models.BuildPiece", "OutPiece")
-                        .WithMany("OutLinks")
-                        .HasForeignKey("OutPieceId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("InPiece");
-
-                    b.Navigation("OutPiece");
-                });
-
-            modelBuilder.Entity("WebApp.Models.LearningTask", b =>
-                {
-                    b.HasOne("WebApp.Models.Module", "Module")
-                        .WithMany()
-                        .HasForeignKey("ModuleId")
+                    b.HasOne("WebApp.Models.BuildPiece", "OnBuildPiece")
+                        .WithMany("Sockets")
+                        .HasForeignKey("OnBuildPieceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Module");
+                    b.HasOne("WebApp.Models.PieceSocket", "SocketType")
+                        .WithMany()
+                        .HasForeignKey("SocketTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("HoldingBuildPiece");
+
+                    b.Navigation("OnBuildPiece");
+
+                    b.Navigation("SocketType");
                 });
 
             modelBuilder.Entity("WebApp.Models.Module", b =>
@@ -576,7 +580,7 @@ namespace WebApp.Migrations
                         .IsRequired();
 
                     b.HasOne("WebApp.Models.LearningTask", "ExaminationTask")
-                        .WithOne()
+                        .WithOne("Module")
                         .HasForeignKey("WebApp.Models.Module", "ExaminationTaskId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -605,21 +609,15 @@ namespace WebApp.Migrations
                     b.Navigation("Prefab");
                 });
 
-            modelBuilder.Entity("WebApp.Models.PieceLink", b =>
+            modelBuilder.Entity("WebApp.Models.PieceSocket", b =>
                 {
-                    b.HasOne("WebApp.Models.Piece", "InPiece")
-                        .WithMany("InLinks")
-                        .HasForeignKey("InPieceId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                    b.HasOne("WebApp.Models.Piece", "Piece")
+                        .WithMany("Sockets")
+                        .HasForeignKey("PieceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
-                    b.HasOne("WebApp.Models.Piece", "OutPiece")
-                        .WithMany("OutLinks")
-                        .HasForeignKey("OutPieceId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("InPiece");
-
-                    b.Navigation("OutPiece");
+                    b.Navigation("Piece");
                 });
 
             modelBuilder.Entity("WebApp.Models.UserTrainer", b =>
@@ -643,22 +641,26 @@ namespace WebApp.Migrations
 
             modelBuilder.Entity("WebApp.Models.Build", b =>
                 {
-                    b.Navigation("FirstPiece")
-                        .IsRequired();
+                    b.Navigation("Pieces");
                 });
 
             modelBuilder.Entity("WebApp.Models.BuildPiece", b =>
                 {
-                    b.Navigation("InLinks");
+                    b.Navigation("HeldIn")
+                        .IsRequired();
 
-                    b.Navigation("OutLinks");
+                    b.Navigation("Sockets");
+                });
+
+            modelBuilder.Entity("WebApp.Models.LearningTask", b =>
+                {
+                    b.Navigation("Module")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("WebApp.Models.Piece", b =>
                 {
-                    b.Navigation("InLinks");
-
-                    b.Navigation("OutLinks");
+                    b.Navigation("Sockets");
                 });
 #pragma warning restore 612, 618
         }

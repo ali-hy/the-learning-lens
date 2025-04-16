@@ -5,7 +5,7 @@
 namespace WebApp.Migrations
 {
     /// <inheritdoc />
-    public partial class AddBuildModel : Migration
+    public partial class AddBuildEntity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,18 +33,6 @@ namespace WebApp.Migrations
                 newName: "ExaminationTaskId");
 
             migrationBuilder.CreateTable(
-                name: "Builds",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Builds", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "LearningTasks",
                 columns: table => new
                 {
@@ -59,12 +47,6 @@ namespace WebApp.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_LearningTasks", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_LearningTasks_Modules_ModuleId",
-                        column: x => x.ModuleId,
-                        principalTable: "Modules",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -110,7 +92,6 @@ namespace WebApp.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TaskId = table.Column<long>(type: "bigint", nullable: false),
                     PrefabId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
@@ -122,6 +103,27 @@ namespace WebApp.Migrations
                         principalTable: "Prefabs",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PieceLinks",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PieceId = table.Column<long>(type: "bigint", nullable: false),
+                    JsonDescription = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PieceLinks", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PieceLinks_Pieces_PieceId",
+                        column: x => x.PieceId,
+                        principalTable: "Pieces",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -137,12 +139,6 @@ namespace WebApp.Migrations
                 {
                     table.PrimaryKey("PK_BuildPieces", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BuildPieces_Builds_BuildId",
-                        column: x => x.BuildId,
-                        principalTable: "Builds",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_BuildPieces_Pieces_PieceId",
                         column: x => x.PieceId,
                         principalTable: "Pieces",
@@ -151,55 +147,52 @@ namespace WebApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PieceLinks",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    InPieceId = table.Column<long>(type: "bigint", nullable: true),
-                    OutPieceId = table.Column<long>(type: "bigint", nullable: true),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PieceLinks", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PieceLinks_Pieces_InPieceId",
-                        column: x => x.InPieceId,
-                        principalTable: "Pieces",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_PieceLinks_Pieces_OutPieceId",
-                        column: x => x.OutPieceId,
-                        principalTable: "Pieces",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "BuildPiecesLink",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    OutPieceId = table.Column<long>(type: "bigint", nullable: false),
-                    OutLinkName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    InPieceId = table.Column<long>(type: "bigint", nullable: false),
-                    InLinkName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    SocketTypeId = table.Column<long>(type: "bigint", nullable: false),
+                    OnBuildPieceId = table.Column<long>(type: "bigint", nullable: false),
+                    HoldingBuildPieceId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BuildPiecesLink", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BuildPiecesLink_BuildPieces_InPieceId",
-                        column: x => x.InPieceId,
+                        name: "FK_BuildPiecesLink_BuildPieces_HoldingBuildPieceId",
+                        column: x => x.HoldingBuildPieceId,
                         principalTable: "BuildPieces",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BuildPiecesLink_BuildPieces_OutPieceId",
-                        column: x => x.OutPieceId,
+                        name: "FK_BuildPiecesLink_BuildPieces_OnBuildPieceId",
+                        column: x => x.OnBuildPieceId,
+                        principalTable: "BuildPieces",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BuildPiecesLink_PieceLinks_SocketTypeId",
+                        column: x => x.SocketTypeId,
+                        principalTable: "PieceLinks",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Builds",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstPieceId = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Builds", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Builds_BuildPieces_FirstPieceId",
+                        column: x => x.FirstPieceId,
                         principalTable: "BuildPieces",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -219,8 +212,7 @@ namespace WebApp.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_BuildPieces_BuildId",
                 table: "BuildPieces",
-                column: "BuildId",
-                unique: true);
+                column: "BuildId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BuildPieces_PieceId",
@@ -228,29 +220,31 @@ namespace WebApp.Migrations
                 column: "PieceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BuildPiecesLink_InPieceId",
+                name: "IX_BuildPiecesLink_HoldingBuildPieceId",
                 table: "BuildPiecesLink",
-                column: "InPieceId");
+                column: "HoldingBuildPieceId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_BuildPiecesLink_OutPieceId",
+                name: "IX_BuildPiecesLink_OnBuildPieceId",
                 table: "BuildPiecesLink",
-                column: "OutPieceId");
+                column: "OnBuildPieceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LearningTasks_ModuleId",
-                table: "LearningTasks",
-                column: "ModuleId");
+                name: "IX_BuildPiecesLink_SocketTypeId",
+                table: "BuildPiecesLink",
+                column: "SocketTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PieceLinks_InPieceId",
+                name: "IX_Builds_FirstPieceId",
+                table: "Builds",
+                column: "FirstPieceId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PieceLinks_PieceId",
                 table: "PieceLinks",
-                column: "InPieceId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PieceLinks_OutPieceId",
-                table: "PieceLinks",
-                column: "OutPieceId");
+                column: "PieceId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pieces_PrefabId",
@@ -283,6 +277,14 @@ namespace WebApp.Migrations
                 principalTable: "LearningTasks",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_BuildPieces_Builds_BuildId",
+                table: "BuildPieces",
+                column: "BuildId",
+                principalTable: "Builds",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
         }
 
         /// <inheritdoc />
@@ -296,6 +298,10 @@ namespace WebApp.Migrations
                 name: "FK_Modules_LearningTasks_ExaminationTaskId",
                 table: "Modules");
 
+            migrationBuilder.DropForeignKey(
+                name: "FK_BuildPieces_Builds_BuildId",
+                table: "BuildPieces");
+
             migrationBuilder.DropTable(
                 name: "BuildPiecesLink");
 
@@ -303,16 +309,16 @@ namespace WebApp.Migrations
                 name: "LearningTasks");
 
             migrationBuilder.DropTable(
-                name: "PieceLinks");
-
-            migrationBuilder.DropTable(
                 name: "UserTrainers");
 
             migrationBuilder.DropTable(
-                name: "BuildPieces");
+                name: "PieceLinks");
 
             migrationBuilder.DropTable(
                 name: "Builds");
+
+            migrationBuilder.DropTable(
+                name: "BuildPieces");
 
             migrationBuilder.DropTable(
                 name: "Pieces");

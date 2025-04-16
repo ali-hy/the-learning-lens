@@ -6,7 +6,6 @@ namespace Models.Dtos.Build
     {
         public long Id { get; set; }
         public BuildPieceResponse FirstPiece { get; set; } = null!;
-
         public IList<BuildPieceResponse> Pieces { get; set; } = null!;
     }
 }

@@ -16,10 +16,10 @@ namespace WebApp.Helpers
 
         public DbSet<Build> Builds { get; set; }
         public DbSet<BuildPiece> BuildPieces { get; set; }
-        public DbSet<BuildPieceLink> BuildPiecesLink { get; set; }
+        public DbSet<BuildPieceSocket> BuildPiecesLink { get; set; }
 
         public DbSet<Piece> Pieces { get; set; }
-        public DbSet<PieceLink> PieceLinks { get; set; }
+        public DbSet<PieceSocket> PieceLinks { get; set; }
         public DbSet<Prefab> Prefabs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -46,7 +46,7 @@ namespace WebApp.Helpers
 
                 // ExaminationTask Relationship
                 b.HasOne(m => m.ExaminationTask)
-                .WithOne()
+                .WithOne(lt => lt.Module)
                 .HasForeignKey<Module>(m => m.ExaminationTaskId)
                 .OnDelete(DeleteBehavior.Restrict);
             });
@@ -60,34 +60,39 @@ namespace WebApp.Helpers
 
             builder.Entity<Build>(b =>
             {
-                b.HasMany(b => b.Pieces)
+                b.HasOne(b => b.FirstPiece)
                 .WithOne()
-                .HasForeignKey(b => b.BuildId);
+                .HasForeignKey<Build>(b => b.FirstPieceId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
+
+                b.HasMany(b => b.Pieces)
+                .WithOne(p => p.Build)
+                .HasForeignKey(p => p.BuildId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
             });
 
             builder.Entity<Piece>(b =>
             {
-                b.HasMany(p => p.InLinks)
-                .WithOne(l => l.InPiece)
-                .HasForeignKey(l => l.InPieceId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-                b.HasMany(p => p.OutLinks)
-                .WithOne(l => l.OutPiece)
-                .HasForeignKey(l => l.OutPieceId)
+                b.HasMany(p => p.Sockets)
+                .WithOne(s => s.Piece)
                 .OnDelete(DeleteBehavior.Restrict);
             });
 
             builder.Entity<BuildPiece>(b =>
             {
-                b.HasMany(bp => bp.InLinks)
-                .WithOne(l => l.InPiece)
-                .HasForeignKey(p => p.InPieceId)
-                .OnDelete(DeleteBehavior.Restrict);
+                b.HasMany(bp => bp.Sockets)
+                .WithOne(s => s.OnBuildPiece)
+                .HasForeignKey(s => s.OnBuildPieceId)
+                .OnDelete(DeleteBehavior.Cascade);
+            });
 
-                b.HasMany(bp => bp.OutLinks)
-                .WithOne(l => l.OutPiece)
-                .HasForeignKey(bp => bp.OutPieceId)
+            builder.Entity<BuildPieceSocket>(b =>
+            {
+                b.HasOne(s => s.HoldingBuildPiece)
+                .WithOne(bp => bp.HeldIn)
+                .HasForeignKey<BuildPieceSocket>(bp => bp.HoldingBuildPieceId)
                 .OnDelete(DeleteBehavior.Restrict);
             });
         }

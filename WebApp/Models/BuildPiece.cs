@@ -10,7 +10,7 @@
         public long BuildId { get; set; }
         public Build Build { get; set; } = null!;
 
-        public List<BuildPieceLink> OutLinks { get; set; } = null!;
-        public List<BuildPieceLink> InLinks { get; set; } = null!;
+        public BuildPieceSocket HeldIn { get; set; } = null!;
+        public IList<BuildPieceSocket> Sockets { get; set; } = null!;
     }
 }

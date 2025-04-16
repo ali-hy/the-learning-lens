@@ -7,7 +7,6 @@
         public long PrefabId { get; set; }
         public Prefab Prefab { get; set; } = null!;
 
-        public IList<PieceLink> InLinks { get; set; } = null!;
-        public IList<PieceLink> OutLinks { get; set; } = null!;
+        public IList<PieceSocket> Sockets { get; set; } = null!;
     }
 }

@@ -85,7 +85,6 @@ builder.Services.AddSwaggerGen(options =>
               Scheme = "oauth2",
               Name = "Bearer",
               In = ParameterLocation.Header,
-
             },
             new List<string>()
           }
