@@ -67,6 +67,14 @@ public class MenuManager : MonoBehaviour
     {
         LoadScene("SampleScene");
     }
+    public void SwitchToArScene()
+    {
+        LoadScene("ArScene");
+    }
+    public void SwitchToMainScene()
+    {
+        LoadScene("MainMenu");
+    }
     // Load a scene by its name
     public void LoadScene(string sceneName)
     {
