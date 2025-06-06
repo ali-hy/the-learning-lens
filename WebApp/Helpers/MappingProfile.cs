@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using WebApp.Dtos.Module;
-using WebApp.Dtos.UserAccount;
+using Integration.Dtos.Module;
+using Integration.Dtos.UserAccount;
 using WebApp.Models;
 
 namespace WebApp.Helpers
@@ -11,6 +11,7 @@ namespace WebApp.Helpers
         {
             CreateMap<RegisterRequest, UserAccount>()
                 .ForMember(o => o.UserName, o => o.MapFrom(r => r.Email));
+            CreateMap<UserAccount, UserAccountFlatResponse>();
 
             CreateMap<CreateModuleRequest, Module>();
         }

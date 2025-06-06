@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Dtos.Module;
+using Integration.Dtos.Module;
 using WebApp.Helpers;
 using WebApp.Models;
 
