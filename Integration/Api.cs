@@ -1,14 +1,12 @@
 ﻿using Integration.Client.Services;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Newtonsoft.Json;
+using Integration.Dtos.UserAccount;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using Integration.Dtos.UserAccount;
 
 namespace Integration
 {
@@ -22,10 +20,12 @@ namespace Integration
         }
 
         // JsonSerializer
-        private JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions
+        readonly private JsonSerializerSettings jsonSerializerSettings = new()
         {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            WriteIndented = true
+            ContractResolver = new DefaultContractResolver()
+            {
+                NamingStrategy = new CamelCaseNamingStrategy()
+            }
         };
 
         // Settings
@@ -61,15 +61,18 @@ namespace Integration
                 new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
             Client.DefaultRequestHeaders.Add("User-Agent", ".NET Tester");
 
-            // Load Configuration
-            // Build a config object, using env vars and JSON providers.
-            IConfigurationRoot config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .AddEnvironmentVariables()
-                .Build();
+            // Set JsonConvert default settings
+            JsonConvert.DefaultSettings = () => jsonSerializerSettings;
 
             // Get values from the config given their key and their target type.
-            Settings? settings = config.Get<Settings>();
+            Settings? settings;
+
+            using (StreamReader file = File.OpenText("appsettings.json"))
+            using (JsonTextReader reader = new JsonTextReader(file))
+            {
+                JObject jObj = (JObject)JToken.ReadFrom(reader);
+                settings = jObj.ToObject<Settings>();
+            }
 
             _instance = this;
             if (settings != null)
@@ -81,15 +84,23 @@ namespace Integration
         public async Task<T?> Get<T>(string path)
         {
             HttpResponseMessage httpResponse = await Client.GetAsync($"{BaseUrl}api/{path}");
-            var data = await JsonSerializer.DeserializeAsync<T>(httpResponse.Content.ReadAsStream(), _jsonSerializerOptions);
+            var data = JsonConvert.DeserializeObject<T>(await httpResponse.Content.ReadAsStringAsync());
 
             return data;
         }
 
         public async Task<TData?> Post<TBody, TData>(string path, TBody? body)
         {
-            HttpResponseMessage httpResponse = await Client.PostAsJsonAsync($"{BaseUrl}api/{path}", body);
-            var data = await JsonSerializer.DeserializeAsync<TData>(httpResponse.Content.ReadAsStream(), _jsonSerializerOptions);
+            // Manually serialize the body to JSON
+            string jsonBody = JsonConvert.SerializeObject(body);
+            var content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
+
+            // Send the POST request
+            HttpResponseMessage httpResponse = await Client.PostAsync($"{BaseUrl}api/{path}", content);
+
+            // Read the response and deserialize it
+            string jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+            TData? data = JsonConvert.DeserializeObject<TData>(jsonResponse);
 
             return data;
         }

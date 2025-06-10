@@ -10,7 +10,7 @@ namespace Integration.Dtos.UserAccount
     public class UserAccountFlatResponse
     {
         public long Id { get; set; }
-        public string UserName { get; set; }
+        public string UserName { get; set; } = string.Empty;
 
         [MaxLength(64)]
         public string FirstName { get; set; } = string.Empty;
