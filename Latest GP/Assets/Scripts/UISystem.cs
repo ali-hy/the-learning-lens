@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class MenuManager : MonoBehaviour
 {
     // References to your different menu panels
