@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace Integration.Dtos.Build
 {
     public class Response

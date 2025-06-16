@@ -1,18 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Integration.Client
 {
-    public class BuildPiece(long id, Piece pieceType, Dictionary<long, BuildPieceSocket> buildPieces)
+    public class BuildPiece
     {
-        public long Id { get; set; } = id;
-        public Piece PieceType { get; set; } = pieceType;
-        public Dictionary<long, BuildPieceSocket> Sockets { get; set; } = buildPieces;
+        public long Id { get; set; }
+        public Piece PieceType { get; set; }
+        public Dictionary<long, BuildPieceSocket> Sockets { get; set; }
 
-        public BuildPiece(long id, Piece pieceType) : this(id, pieceType, []) { }
+        public BuildPiece(long id, Piece pieceType, Dictionary<long, BuildPieceSocket> buildPieceSockets)
+        {
+            Id = id;
+            PieceType = pieceType;
+            Sockets = buildPieceSockets;
+        }
+
+        public BuildPiece(long id, Piece pieceType) : this(id, pieceType, new Dictionary<long, BuildPieceSocket>()) { }
 
         public static BuildPiece FromDto(Dtos.BuildPiece.Response dto, Build build)
         {
@@ -21,7 +24,7 @@ namespace Integration.Client
             pieceType ??= Piece.FromDto(dto.PieceType, build);
 
             // Create and define
-            BuildPiece res = new(dto.Id, pieceType);
+            BuildPiece res = new BuildPiece(dto.Id, pieceType);
             build.BuildPieces.Add(res.Id, res);
 
             // Make sockets

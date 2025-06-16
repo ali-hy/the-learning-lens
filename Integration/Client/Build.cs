@@ -11,10 +11,10 @@ namespace Integration.Client
         public long Id { get; set; }
         public BuildPiece FirstPiece { get; set; } = null!;
 
-        public Dictionary<long, BuildPiece> BuildPieces { get; } = [];
-        public Dictionary<long, Piece> PieceTypes { get; } = [];
-        public Dictionary<long, BuildPieceSocket> BuildPieceSockets { get; } = [];
-        public Dictionary<long, PieceSocket> SocketTypes { get; } = [];
+        public Dictionary<long, BuildPiece> BuildPieces { get; } = new Dictionary<long, BuildPiece>();
+        public Dictionary<long, Piece> PieceTypes { get; } = new Dictionary<long, Piece>();
+        public Dictionary<long, BuildPieceSocket> BuildPieceSockets { get; } = new Dictionary<long, BuildPieceSocket>();
+        public Dictionary<long, PieceSocket> SocketTypes { get; } = new Dictionary<long, PieceSocket>();
 
         public Build() { }
 
@@ -25,7 +25,7 @@ namespace Integration.Client
 
         public static Build FromDto(Dtos.Build.Response dto)
         {
-            Build res = new();
+            Build res = new Build();
             res.BuildPieces.Add(dto.Id, BuildPiece.FromDto(dto.FirstPiece, res));
 
             foreach (Dtos.BuildPiece.Response pieceDto in dto.Pieces)

@@ -7,18 +7,26 @@ using System.Threading.Tasks;
 
 namespace Integration.Client
 {
-    public class Piece(long id, string name, IList<PieceSocket> sockets)
+    public class Piece
     {
-        public long Id { get; set; } = id;
-        public string Name { get; set; } = name;
-        public IList<PieceSocket> Sockets { get; set; } = sockets;
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public IList<PieceSocket> Sockets { get; set; }
 
-        public Piece(long id, string name) : this(id, name, []) { }
+        public Piece(long id, string name, IList<PieceSocket> sockets)
+        {
+            Id = id;
+            Name = name;
+            Sockets = sockets;
+        }
+
+        public Piece(long id, string name) : this(id, name, new List<PieceSocket>()) { }
+
         public Piece(long id) : this(id, string.Empty) { }
 
         public static Piece FromDto(Dtos.Piece.Response dto, Build build)
         {
-            Piece res = new(dto.Id, dto.Name);
+            var res = new Piece(dto.Id, dto.Name);
 
             foreach (Dtos.PieceSocket.Response socketTypeDto in dto.Sockets)
             {
