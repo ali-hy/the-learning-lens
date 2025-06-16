@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
+using Integration.Dtos.UserAccount;
 using Microsoft.AspNetCore.Authentication.BearerToken;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
-using WebApp.Dtos.UserAccount;
+using WebApp.Helpers;
 using WebApp.Models;
 
 namespace WebApp.Controllers
@@ -19,7 +20,7 @@ namespace WebApp.Controllers
         private readonly ILogger<UserController> _logger = logger;
         private readonly IMapper _mapper = mapper;
 
-        [HttpPost("/Register")]
+        [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
             UserAccount user = _mapper.Map<UserAccount>(request);
@@ -35,7 +36,7 @@ namespace WebApp.Controllers
             return BadRequest(res.Errors);
         }
 
-        [HttpPost("/Login")]
+        [HttpPost("Login")]
         public async Task<Results<Ok<AccessTokenResponse>, EmptyHttpResult, ProblemHttpResult>> Login(LoginRequest request)
         {
             _signInManager.AuthenticationScheme = IdentityConstants.BearerScheme;
@@ -48,6 +49,16 @@ namespace WebApp.Controllers
 
             _logger.LogInformation("User logged in successfully!");
             return TypedResults.Empty;
+        }
+
+        [Authorize]
+        [HttpGet("UserInfo")]
+        public async Task<IActionResult> GetUserInfo()
+        {
+            if (HttpContext.Items[ContextItem.UserKey] is not UserAccount user)
+                return Unauthorized();
+
+            return Ok(_mapper.Map<UserAccountFlatResponse>(user));
         }
     }
 }

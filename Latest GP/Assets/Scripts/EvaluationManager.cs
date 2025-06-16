@@ -22,7 +22,7 @@ public class EvaluationManager : MonoBehaviour
     [SerializeField] private Slider progressSlider;
 
     // Dictionary to track which sockets have correct parts
-    private Dictionary<string, bool> socketStatus = new Dictionary<string, bool>();
+    private Dictionary<string, bool> socketStatus = new();
 
     // List of part names in proper installation order (if you want a specific order)
     [SerializeField] private List<string> partsInOrder = new List<string>();
@@ -39,7 +39,7 @@ public class EvaluationManager : MonoBehaviour
         if (totalParts <= 0 || !usedProvidedPartsList)
         {
             // Find all socket interactors in the scene
-            XRSocketInteractor[] allSockets = FindObjectsOfType<XRSocketInteractor>();
+            XRSocketInteractor[] allSockets = FindObjectsByType<XRSocketInteractor>(FindObjectsSortMode.None);
 
             if (totalParts <= 0)
                 totalParts = allSockets.Length;
