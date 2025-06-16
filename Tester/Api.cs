@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 
-namespace Integration
+namespace Tester
 {
     public class Api
     {

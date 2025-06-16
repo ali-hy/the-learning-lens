@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Integration.Client
+namespace Integration.Dtos.UserAccount
 {
     public class AuthInfo
     {

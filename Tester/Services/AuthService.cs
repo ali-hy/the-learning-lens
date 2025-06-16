@@ -1,7 +1,7 @@
 ﻿using Integration.Dtos.UserAccount;
 using System.Net.Http;
 
-namespace Integration.Client.Services
+namespace Tester.Services
 {
     public class AuthService
     {
