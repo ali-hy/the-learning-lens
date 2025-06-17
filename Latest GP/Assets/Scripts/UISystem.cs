@@ -19,8 +19,13 @@ public class MenuManager : MonoBehaviour
 
         // Make sure only the main menu is active at start
         mainMenuPanel.SetActive(true);
-        settingsPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+
+        if (settingsPanel)
+            settingsPanel.SetActive(false);
+
+        if (creditsPanel)
+            creditsPanel.SetActive(false);
+
         levelSelectPanel.SetActive(false);
     }
 

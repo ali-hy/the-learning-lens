@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using Integration;
+﻿using Tester;
 
 Console.WriteLine("Initializing API...");
 Api api = await Api.Initialize(new()
