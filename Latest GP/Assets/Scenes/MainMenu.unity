@@ -4881,7 +4881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
       propertyPath: m_SizeDelta.y
@@ -16417,10 +16417,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motorcycle Lesson Item
       objectReference: {fileID: 0}
-    - target: {fileID: 3413933509814612019, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 18.300049
-      objectReference: {fileID: 0}
     - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -16447,19 +16443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 320
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16509,18 +16493,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4044511401336177819, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4884328913451923624, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 21.400024
-      objectReference: {fileID: 0}
-    - target: {fileID: 4884328913451923624, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5.549999
-      objectReference: {fileID: 0}
     - target: {fileID: 7027855526529429129, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -16531,10 +16503,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027855526529429129, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
       propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7459944888494273049, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}
-      propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7473722296533353419, guid: 0f4b171b7ee224d458d4a694e9487736, type: 3}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class MenuManager : MonoBehaviour
 {
     // References to your different menu panels
@@ -79,6 +80,20 @@ public class MenuManager : MonoBehaviour
     {
         LoadScene("MainMenu");
     }
+   
+    public void OnLoginBtnClicked()
+    {
+        GameObject form = GameObject.Find("Login Form");
+
+        if (form != null)
+            throw new System.Exception("Login Form not found");
+
+        var EmailField = form.transform.Find("Email Field").GetComponent<TextMeshProUGUI>();
+        var PasswordField = form.transform.Find("Password Field").GetComponent<TextMeshProUGUI>();
+
+        StartCoroutine(Api.Login(EmailField.text, PasswordField.text, i => Debug.Log($"Logged in with {i.AccessToken}")));
+    }
+
     // Load a scene by its name
     public void LoadScene(string sceneName)
     {

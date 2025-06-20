@@ -4,19 +4,18 @@ using UnityEngine;
 
 public static class JsonHelper
 {
-    public static T FromJson<T>(string json)
+    private static readonly JsonSerializerSettings settings = new JsonSerializerSettings
     {
-        return JsonConvert.DeserializeObject<T>(json, new JsonSerializerSettings() {
-            ContractResolver = new DefaultContractResolver()
-            {
-                NamingStrategy = new CamelCaseNamingStrategy()
-            }
-        });
+        ContractResolver = new CamelCasePropertyNamesContractResolver(),
+    };
+
+    public static string ToJson(object obj)
+    {
+        return JsonConvert.SerializeObject(obj, settings);
     }
 
-    [System.Serializable]
-    private class Wrapper<T>
+    public static T FromJson<T>(string json)
     {
-        public T[] array;
+        return JsonConvert.DeserializeObject<T>(json, settings);
     }
 }
