@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Integration.Dtos.Module;
 using WebApp.Helpers;
 using WebApp.Models;
+using WebApp.Models.Archive;
 
 namespace WebApp.Controllers
 {

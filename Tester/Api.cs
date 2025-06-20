@@ -1,12 +1,10 @@
-﻿using Integration.Client.Services;
-using Newtonsoft.Json;
-using Integration.Dtos.UserAccount;
-using Newtonsoft.Json.Converters;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using System.Text;
+using Tester.Services;
+using Integration.Dtos.UserAccount;
 
 namespace Tester
 {

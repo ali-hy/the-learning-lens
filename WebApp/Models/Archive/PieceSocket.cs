@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApp.Models
+namespace WebApp.Models.Archive
 {
     public class PieceSocket
     {

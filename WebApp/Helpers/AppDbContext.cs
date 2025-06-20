@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Models;
+using WebApp.Models.Archive;
 
 namespace WebApp.Helpers
 {
@@ -10,6 +11,7 @@ namespace WebApp.Helpers
         {
         }
 
+        // Archived
         public DbSet<UserTrainer> UserTrainers { get; set; }
         public DbSet<Module> Modules { get; set; }
         public DbSet<LearningTask> LearningTasks { get; set; }
@@ -20,6 +22,9 @@ namespace WebApp.Helpers
 
         public DbSet<Piece> Pieces { get; set; }
         public DbSet<PieceSocket> PieceLinks { get; set; }
+        
+        // New
+        public DbSet<Lesson> Lessons { get; set; }
         public DbSet<Prefab> Prefabs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -95,6 +100,9 @@ namespace WebApp.Helpers
                 .HasForeignKey<BuildPieceSocket>(bp => bp.HoldingBuildPieceId)
                 .OnDelete(DeleteBehavior.Restrict);
             });
+
+            builder.Entity<Lesson>();
         }
+        public DbSet<WebApp.Models.ArLesson> ArLesson { get; set; } = default!;
     }
 }
