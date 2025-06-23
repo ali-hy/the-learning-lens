@@ -20,10 +20,4 @@ public class LessonLoader : MonoBehaviour
             panel.SetLessonData(lesson);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

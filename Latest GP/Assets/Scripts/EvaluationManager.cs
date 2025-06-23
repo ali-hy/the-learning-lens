@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.UI;
@@ -68,6 +66,35 @@ public class EvaluationManager : MonoBehaviour
             foreach (XRSocketInteractor socket in allSockets)
             {
                 socketStatus.Add(socket.gameObject.name, false);
+            }
+        }
+
+        UpdateProgressDisplay();
+        UpdateInstructionsDisplay();
+    }
+
+    public void OnModelLoaded()
+    {
+        // Find all socket interactors in the scene
+        XRSocketInteractor[] allSockets = FindObjectsByType<XRSocketInteractor>(FindObjectsSortMode.None);
+
+        if (totalParts <= 0)
+            totalParts = allSockets.Length;
+
+        // Initialize the dictionary and part list if needed
+        foreach (XRSocketInteractor socket in allSockets)
+        {
+            string socketName = socket.gameObject.name;
+            socketStatus.Add(socketName, false);
+
+            if (!usedProvidedPartsList)
+            {
+                // Extract expected part name from socket name
+                string partName = GetExpectedPartName(socketName);
+                if (!string.IsNullOrEmpty(partName))
+                {
+                    partsInOrder.Add(partName);
+                }
             }
         }
 

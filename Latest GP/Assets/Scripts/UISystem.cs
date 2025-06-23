@@ -68,10 +68,7 @@ public class MenuManager : MonoBehaviour
     {
         SwitchToPanel(levelSelectPanel);
     }
-    public void SwitchToBikeScene()
-    {
-        LoadScene("SampleScene");
-    }
+    
     public void SwitchToArScene()
     {
         LoadScene("ArScene");
@@ -80,7 +77,12 @@ public class MenuManager : MonoBehaviour
     {
         LoadScene("MainMenu");
     }
-   
+    public void SwitchToTrainingScene(LessonItem lessonItem)
+    {
+
+        LessonSceneLoader.LoadLessonScene(lessonItem, () => SceneManager.LoadScene("LessonScene"));
+    }
+
     public void OnLoginBtnClicked()
     {
         GameObject form = GameObject.Find("Login Form");

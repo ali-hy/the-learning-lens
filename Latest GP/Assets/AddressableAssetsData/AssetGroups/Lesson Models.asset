@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Lesson Models
+  m_EditorClassIdentifier: 
+  m_GroupName: Lesson Models
+  m_GUID: b6053e3b679732e4ba5aeab1fac05e1a
+  m_SerializeEntries:
+  - m_GUID: 22a8455b80ffa564380c9ee0c5bcad4f
+    m_Address: Bike/Buildable
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 877035b7485c41f4fb806e2490bcf81f
+    m_Address: Bike/Reference
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9a7dfaa06eead6c4d8c046713701a0da, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: fcf2c095b20f6584581101c9e7bb909a, type: 2}
+    - {fileID: 11400000, guid: 4ea25e92345ee4d4bbb7e585564eba0f, type: 2}

@@ -1528,6 +1528,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -3105,6 +3106,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -4307,6 +4309,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -4821,6 +4824,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -5199,6 +5203,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -6873,6 +6878,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -7228,6 +7234,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -7790,6 +7797,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -8117,6 +8125,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -9121,6 +9130,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -10327,6 +10337,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -12208,6 +12219,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -13029,6 +13041,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -13577,6 +13590,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -14377,6 +14391,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -15300,6 +15315,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -15607,6 +15623,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -15747,6 +15764,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -16673,6 +16691,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -17048,6 +17067,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -17804,6 +17824,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -17944,6 +17965,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -18084,6 +18106,7 @@ MonoBehaviour:
   valueText: {fileID: 0}
   tagsText: {fileID: 0}
   iconImage: {fileID: 0}
+  panelDisplayDuration: 10
   followSpeed: 8
   positionOffset: {x: 0.5, y: 0.3, z: 0}
   facePlayer: 1
@@ -18212,20 +18235,60 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -7200082302287050408, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -7200082302287050408, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.584
+      value: 0.412
+      objectReference: {fileID: 0}
+    - target: {fileID: -7200082302287050408, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.513
       objectReference: {fileID: 0}
     - target: {fileID: -7170000309034271933, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.456
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.739
+      value: 0.529
       objectReference: {fileID: 0}
     - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.612
+      value: 0.289
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0034341624
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7157771
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0033503694
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.69831234
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -179.986
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 88.585
+      objectReference: {fileID: 0}
+    - target: {fileID: -7064252986447100351, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.5499878
       objectReference: {fileID: 0}
     - target: {fileID: -6893774957222367384, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_Layer
@@ -18281,39 +18344,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5177505270185198052, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.929
+      value: 2.868
       objectReference: {fileID: 0}
     - target: {fileID: -5177505270185198052, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.674
+      value: 0.358
       objectReference: {fileID: 0}
     - target: {fileID: -5177505270185198052, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.763
+      value: -2.458
+      objectReference: {fileID: 0}
+    - target: {fileID: -4864416212022458404, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.49
       objectReference: {fileID: 0}
     - target: {fileID: -4864416212022458404, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.595
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: -4864416212022458404, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.708
       objectReference: {fileID: 0}
     - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.529
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.719
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.436
+      value: -1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0034500798
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.71909475
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0033339753
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6948955
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -179.981
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 88.039
+      objectReference: {fileID: 0}
+    - target: {fileID: -4471920882661307880, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.54901123
       objectReference: {fileID: 0}
     - target: {fileID: -4262579097524442890, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.297
+      value: 6.369
+      objectReference: {fileID: 0}
+    - target: {fileID: -4262579097524442890, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.076
       objectReference: {fileID: 0}
     - target: {fileID: -4262579097524442890, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.557
+      value: 1.689
       objectReference: {fileID: 0}
     - target: {fileID: -4228680191717045076, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -18328,12 +18431,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 0cfb4aa2ebd9d42469665a07b3464123, type: 2}
     - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.492
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.74
+      value: 0.524
       objectReference: {fileID: 0}
     - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.78
+      value: 1.459
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0035606374
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7421381
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0032156345
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6702298
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -179.944
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 84.171
+      objectReference: {fileID: 0}
+    - target: {fileID: -3931017250704317259, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.5469971
       objectReference: {fileID: 0}
     - target: {fileID: -3778422203796799950, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_Layer
@@ -18352,12 +18487,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: cd7afeca027399246b86c597f8a0b0e7, type: 2}
     - target: {fileID: -2453794668538161415, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -2453794668538161415, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.197
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -2453794668538161415, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.316
+      value: -1.78
       objectReference: {fileID: 0}
     - target: {fileID: -2053087977776922363, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -18365,15 +18504,51 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e1a684120a2816647978b54f5d856776, type: 2}
     - target: {fileID: -1738286158709547900, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.188
+      value: 4.37
+      objectReference: {fileID: 0}
+    - target: {fileID: -1738286158709547900, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25169724
+      objectReference: {fileID: 0}
+    - target: {fileID: -1738286158709547900, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.8159254
+      objectReference: {fileID: 0}
+    - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.436
       objectReference: {fileID: 0}
     - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.246
+      value: 0.654
       objectReference: {fileID: 0}
     - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.869
+      value: 2.652
+      objectReference: {fileID: 0}
+    - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49163577
+      objectReference: {fileID: 0}
+    - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.4916358
+      objectReference: {fileID: 0}
+    - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.50822663
+      objectReference: {fileID: 0}
+    - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5082266
+      objectReference: {fileID: 0}
+    - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -1143102349269367719, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 91.901
       objectReference: {fileID: 0}
     - target: {fileID: -973259502287092097, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -18389,19 +18564,31 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2a8234130e7aeb8488b60a145af9e858, type: 2}
     - target: {fileID: -299705724880490052, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.294
+      value: 6.743
+      objectReference: {fileID: 0}
+    - target: {fileID: -299705724880490052, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.236
       objectReference: {fileID: 0}
     - target: {fileID: -299705724880490052, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.007
+      value: 0.539
       objectReference: {fileID: 0}
     - target: {fileID: -199238305007970379, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2a8234130e7aeb8488b60a145af9e858, type: 2}
     - target: {fileID: -12004382033226168, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.898
+      objectReference: {fileID: 0}
+    - target: {fileID: -12004382033226168, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.219
+      objectReference: {fileID: 0}
+    - target: {fileID: -12004382033226168, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.831
+      value: -2.416
       objectReference: {fileID: 0}
     - target: {fileID: 424797892135438382, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_Name
@@ -18413,55 +18600,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 823493880655020991, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.956
+      value: 3.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 823493880655020991, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 823493880655020991, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.57
       objectReference: {fileID: 0}
     - target: {fileID: 871311956837940460, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.87
+      value: -0.646
       objectReference: {fileID: 0}
     - target: {fileID: 871311956837940460, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.726
+      value: 0.157
       objectReference: {fileID: 0}
     - target: {fileID: 871311956837940460, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.002
+      value: -2.646
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_Name
-      value: bike model 2 (1) 2
+      value: BuildableBike
       objectReference: {fileID: 0}
     - target: {fileID: 1055082409755412451, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.122
+      value: 4.304
       objectReference: {fileID: 0}
     - target: {fileID: 1055082409755412451, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.58835125
+      value: 0.2395575
       objectReference: {fileID: 0}
     - target: {fileID: 1055082409755412451, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.239
+      value: -2.2657537
       objectReference: {fileID: 0}
     - target: {fileID: 1736818802539308666, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.104
+      value: 4.286
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736818802539308666, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736818802539308666, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.303
       objectReference: {fileID: 0}
     - target: {fileID: 1909237593698485612, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.63
+      value: 6.459
       objectReference: {fileID: 0}
     - target: {fileID: 1909237593698485612, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.321
+      value: 0.316
       objectReference: {fileID: 0}
     - target: {fileID: 1909237593698485612, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.532
+      value: -1.176
       objectReference: {fileID: 0}
     - target: {fileID: 2098735353737456843, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.711
+      value: 6.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 2098735353737456843, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 2389086943316877436, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -18473,15 +18680,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8edbb16670478f94cb56fe6c6b150a50, type: 2}
     - target: {fileID: 3182289168679201631, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.720929
+      value: 5.691
       objectReference: {fileID: 0}
     - target: {fileID: 3182289168679201631, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7104633
+      value: 0.235
       objectReference: {fileID: 0}
     - target: {fileID: 3182289168679201631, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.31152773
+      value: -2.65
       objectReference: {fileID: 0}
     - target: {fileID: 3182289168679201631, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18532,24 +18739,92 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 2a8234130e7aeb8488b60a145af9e858, type: 2}
     - target: {fileID: 4531702882741360724, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531702882741360724, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.493
+      value: 0.5029999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531702882741360724, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5129999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.343
       objectReference: {fileID: 0}
     - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.246
+      value: 0.559
       objectReference: {fileID: 0}
     - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.535
+      value: 3.782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5141289
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.51412886
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.48546007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.48546007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578958956270397469, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 86.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4249964
       objectReference: {fileID: 0}
     - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.726
+      value: 0.3909999
       objectReference: {fileID: 0}
     - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.699
+      value: -0.7080002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.003465778
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.72236663
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0033176546
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.69149363
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -179.976
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.498
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862416032903720161, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.54901123
       objectReference: {fileID: 0}
     - target: {fileID: 5689214077219933787, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -19272,7 +19547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 8208581420897983913}
+  panelDisplayDuration: 10
 --- !u!114 &4236046102652740650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19287,9 +19563,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: headlamp
-    description: The headlamp on a motorcycle is the front-facing light that illuminates
+    description: 'The headlamp on a motorcycle is the front-facing light that illuminates
       the road ahead for visibility at night or in low-light conditions and also
       makes the motorcycle more visible to others.
+
+
+      it is placed in the stearing
+      hub of the bike.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -19485,7 +19766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 5881667645536806252}
+  panelDisplayDuration: 10
 --- !u!114 &4578391770208900652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19503,7 +19785,8 @@ MonoBehaviour:
     description: "The middle engine pipe is a balance tube or internal oil circulation
       pipe. It connects parts within the engine\u2014like the cylinder heads or crankcase
       chambers\u2014to equalize internal pressure, temperature, or assist in distributing
-      oil evenly."
+      oil evenly.\n\nit is placed in the upper middle part of the engine."
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -19741,7 +20024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 8538420954150672252}
+  panelDisplayDuration: 10
 --- !u!114 &3450556589425478109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19756,9 +20040,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: front fender
-    description: The front fender on a motorcycle is the curved cover over the front
+    description: 'The front fender on a motorcycle is the curved cover over the front
       wheel that helps block water, mud, and debris from being thrown up onto the
       rider or bike.
+
+
+      it is placed on the front side of the frame above the
+      front wheel.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -19954,7 +20243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 2324682704984527105}
+  panelDisplayDuration: 10
 --- !u!114 &1018356028577302791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19969,9 +20259,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: left shock
-    description: The left shock on a motorcycle is one of the front suspension components,
+    description: 'The left shock on a motorcycle is one of the front suspension components,
       located on the left side, that absorbs bumps and vibrations from the road to
       ensure a smoother and more stable ride.
+
+
+      it is placed on the front side
+      of the bike frame on the left side of the wheel.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -20167,7 +20462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 6332495502595937221}
+  panelDisplayDuration: 10
 --- !u!114 &6958325855505605800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20182,9 +20478,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: seat spring
-    description: The seat spring on a motorcycle is a suspension component placed
+    description: 'The seat spring on a motorcycle is a suspension component placed
       beneath the seat to absorb shocks and vibrations from the road, providing a
       more comfortable ride for the rider.
+
+
+      it is placed in the upper back
+      die of the frame under the seat.
+
+
+'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -20385,7 +20689,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 5781307233877795785}
+  panelDisplayDuration: 10
 --- !u!114 &4847608048697499096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20400,8 +20705,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: exhaust
-    description: The exhaust on a motorcycle is the system that channels out burnt
+    description: 'The exhaust on a motorcycle is the system that channels out burnt
       gases from the engine, reduces noise, and often improves performance and efficiency.
+
+
+      It
+      is placed on the left side of the engine.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -20614,9 +20924,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: Transmition
-    description: The transmission on a motorcycle is the system that transfers power
+    description: 'The transmission on a motorcycle is the system that transfers power
       from the engine to the rear wheel, allowing the rider to shift gears and control
       speed and torque.
+
+
+      it is placed on the lower back side of the frame
+      between the engine and back wheel.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -20637,6 +20952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 6733630611566074429}
+  panelDisplayDuration: 10
 --- !u!1 &5150765520795046113 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8847656913003359984, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
@@ -20825,7 +21141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 3861018035121390601}
+  panelDisplayDuration: 10
 --- !u!114 &4445185106198784679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20843,7 +21160,9 @@ MonoBehaviour:
     description: "The right engine pipe functions similarly to the left and is an
       oil feed or pressure relief line. It allows oil or gases to circulate between
       the engine and transmission, maintaining lubrication and pressure balance on
-      the engine\u2019s right side."
+      the engine\u2019s right side.\n\nit is placed on the upper right side of the
+      egnine."
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -21039,7 +21358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 6072804930316766781}
+  panelDisplayDuration: 10
 --- !u!114 &3583141926843697475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21054,9 +21374,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: back rim
-    description: The back rim on a motorcycle is the metal ring that holds the rear
-      tire in place, forming part of the wheel and supporting the bike's weight and
-      movement.
+    description: 'The back rim on a motorcycle is the metal ring that holds the rear
+      tire in place, forming part of the wheel and supporting the bike''s weight
+      and movement.
+
+
+      it is placed in the back of the bike.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -21269,9 +21593,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: Engine
-    description: An engine is a machine designed to convert energy into mechanical
+    description: 'An engine is a machine designed to convert energy into mechanical
       motion, typically used to power vehicles, machinery, or devices. It operates
       by burning fuel or using electricity to generate force that drives movement.
+
+
+      it
+      is placed in the front lower side of the frame.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -21291,7 +21620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 585505603413952888}
+  panelDisplayDuration: 10
 --- !u!4 &6355430509837681821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1909237593698485612, guid: 22cfcceadff35294f9fe67db3a9c62af, type: 3}
@@ -21490,7 +21820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 4182564038301978917}
+  panelDisplayDuration: 10
 --- !u!114 &5811081180814507235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21505,8 +21836,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: fuel tank
-    description: The fuel tank on a motorcycle is the container that stores gasoline,
+    description: 'The fuel tank on a motorcycle is the container that stores gasoline,
       usually located above the engine, and supplies fuel to the engine for combustion.
+
+
+      it
+      is placed on the higher front of the frame in front of the driver seat.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -21717,7 +22053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 955019269432439180}
+  panelDisplayDuration: 10
 --- !u!114 &1196918583723356950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21732,9 +22069,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: left engine pipe
-    description: The left engine pipe is an oil return or breather line that connects
+    description: 'The left engine pipe is an oil return or breather line that connects
       the engine to the transmission or crankcase. It helps manage oil flow or air
       pressure from the left side of the engine during operation.
+
+
+      it is placed
+      on the upper left part of the engine.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -21930,7 +22272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 872654628317181222}
+  panelDisplayDuration: 10
 --- !u!114 &4771360295906281099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21945,9 +22288,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: back lamp
-    description: The back lamp on a motorcycle is a rear-facing light that combines
+    description: 'The back lamp on a motorcycle is a rear-facing light that combines
       the tail light and brake light functions, helping other drivers see the motorcycle
-      at night and signaling when it's slowing down or stopping.
+      at night and signaling when it''s slowing down or stopping.
+
+
+      it is placed
+      on the back side of the back fender.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -22143,7 +22491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 8526047437874306875}
+  panelDisplayDuration: 10
 --- !u!114 &7447364125381456598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22158,9 +22507,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: back tire
-    description: The back tire on a motorcycle is the rear rubber wheel that provides
-      traction, supports most of the bike's weight, and delivers power from the engine
-      to the road.
+    description: 'The back tire on a motorcycle is the rear rubber wheel that provides
+      traction, supports most of the bike''s weight, and delivers power from the
+      engine to the road.
+
+
+      it is placed on the back rim of the bike.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -22356,7 +22709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 1055376485888325176}
+  panelDisplayDuration: 10
 --- !u!114 &5981010107228183516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22371,11 +22725,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: back fender
-    description: The back fender on a motorcycle is the curved piece of metal or
+    description: 'The back fender on a motorcycle is the curved piece of metal or
       plastic located above the rear wheel. Its main function is to block mud, water,
       and debris thrown up by the tire, helping to keep the rider and bike cleaner.
       It also often supports components like the tail light, license plate, and turn
-      signals, and contributes to the bike's overall style and aerodynamics.
+      signals, and contributes to the bike''s overall style and aerodynamics.
+
+
+      It
+      is placed on the back side of the frame above the wheels'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -22571,7 +22930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 3312291951167205306}
+  panelDisplayDuration: 10
 --- !u!114 &444046980718946347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22586,9 +22946,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: right shock
-    description: The Right shock on a motorcycle is one of the rear suspension components,
+    description: 'The Right shock on a motorcycle is one of the rear suspension components,
       located on the right side, that absorbs bumps and vibrations from the road
       to ensure a smoother and more stable ride.
+
+
+      it is placed on the front
+      side of the bike frame on the right side of the wheel.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -22784,7 +23149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 6843214916377029410}
+  panelDisplayDuration: 10
 --- !u!114 &9032378362443889370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22799,8 +23165,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: front tire
-    description: The front tire on a motorcycle is the rubber wheel at the front
+    description: 'The front tire on a motorcycle is the rubber wheel at the front
       that provides steering control, grip, and stability while riding.
+
+
+      it
+      is placed on the front rim of the bike.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -23001,7 +23372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 8771957651108684326}
+  panelDisplayDuration: 10
 --- !u!114 &4111553099229646785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23016,9 +23388,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: front rim
-    description: The front rim on a motorcycle is the metal ring that holds the front
-      tire, forming the front wheel and allowing smooth steering and balance while
-      riding.
+    description: 'The front rim on a motorcycle is the metal ring that holds the
+      front tire, forming the front wheel and allowing smooth steering and balance
+      while riding.
+
+
+      it is placed on the front of the bike. '
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -23214,7 +23590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 1992857441602633711}
+  panelDisplayDuration: 10
 --- !u!114 &5697503417885315782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23229,9 +23606,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: carbeurator
-    description: A carburetor is a device in older motorcycles and cars that mixes
+    description: 'A carburetor is a device in older motorcycles and cars that mixes
       air and fuel in the right ratio before it enters the engine for combustion,
       allowing the engine to run smoothly.
+
+
+      it is placed above the transmition.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -23427,7 +23808,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 1095831536672234488}
+  panelDisplayDuration: 10
 --- !u!114 &2294801920389357314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23442,8 +23824,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: seat
-    description: The seat on a motorcycle is the padded area where the rider (and
+    description: 'The seat on a motorcycle is the padded area where the rider (and
       sometimes a passenger) sits, designed for comfort and support during riding.
+
+
+      it
+      is placed on the upper back side of the frame.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -23639,7 +24026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 3178534773562691205}
+  panelDisplayDuration: 10
 --- !u!114 &7973180834740396480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23654,9 +24042,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: stearring hub
-    description: The steering hub on a motorcycle, often referred to as the steering
+    description: 'The steering hub on a motorcycle, often referred to as the steering
       stem or triple tree, is the central part that connects the front fork to the
       frame and allows the rider to steer the motorcycle by turning the handlebars.
+
+
+      it
+      is placed on the upper front side of the pike where the handeles and headlights
+      should be placed.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
@@ -23852,7 +24246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb2c1bad8223794da0fcaa1ef51beb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoPanel: {fileID: 0}
+  infoPanel: {fileID: 8451927030885955501}
+  panelDisplayDuration: 10
 --- !u!114 &2917783651774723567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23867,9 +24262,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInfo:
     objectName: handels
-    description: The handles (or handlebars) on a motorcycle are the steering controls
+    description: 'The handles (or handlebars) on a motorcycle are the steering controls
       used by the rider to direct the bike, as well as operate the throttle, brakes,
       clutch, and other controls.
+
+
+      it is placed in the stearing hub of the
+      bike.'
+    hideInfoWhenSocketed: 1
     icon: {fileID: 0}
     weight: 1
     rarity: Common
