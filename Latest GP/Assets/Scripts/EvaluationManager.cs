@@ -28,6 +28,9 @@ public class EvaluationManager : MonoBehaviour
     // Flag to track if we auto-discovered parts or used the provided list
     private bool usedProvidedPartsList = false;
 
+    [SerializeField] private AudioSource positiveAudio;
+    [SerializeField] private AudioSource negativeAudio;
+
     void Start()
     {
         // Check if we have a predefined list of parts
@@ -122,9 +125,13 @@ public class EvaluationManager : MonoBehaviour
             correctlyPlacedParts++;
             UpdateProgressDisplay();
             UpdateInstructionsDisplay();
-
+            positiveAudio.Play();
             Debug.Log("Correct placement: " + objectName + " in " + socketName);
             Debug.Log("Progress: " + GetProgressPercentage() + "%");
+        }
+        else
+        {
+            negativeAudio.Play();
         }
     }
 
@@ -141,7 +148,7 @@ public class EvaluationManager : MonoBehaviour
             correctlyPlacedParts--;
             UpdateProgressDisplay();
             UpdateInstructionsDisplay();
-
+            negativeAudio.Play();
             Debug.Log("Correct part removed from " + socketName);
             Debug.Log("Progress: " + GetProgressPercentage() + "%");
         }
