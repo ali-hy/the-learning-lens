@@ -27,51 +27,6 @@ namespace WebApp.Controllers
             return await _context.ArLesson.ToListAsync();
         }
 
-        // GET: api/ArLessons/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ArLesson>> GetArLesson(long id)
-        {
-            var arLesson = await _context.ArLesson.FindAsync(id);
-
-            if (arLesson == null)
-            {
-                return NotFound();
-            }
-
-            return arLesson;
-        }
-
-        // PUT: api/ArLessons/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutArLesson(long id, ArLesson arLesson)
-        {
-            if (id != arLesson.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(arLesson).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ArLessonExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
         // POST: api/ArLessons
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -83,7 +38,7 @@ namespace WebApp.Controllers
             if (formData.Preview != null && formData.Preview.Length > 0)
             {
                 var previewFileName = $"{Guid.NewGuid()}_{formData.Preview.FileName}";
-                var previewFilePath = Path.Combine("arLesson", "previews", previewFileName);
+                var previewFilePath = Path.Combine("static", "arLesson", "previews", previewFileName);
                 using (var stream = new FileStream(previewFilePath, FileMode.Create))
                 {
                     await formData.Preview.CopyToAsync(stream);

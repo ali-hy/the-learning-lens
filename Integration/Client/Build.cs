@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Integration.Client
 {
@@ -23,12 +19,12 @@ namespace Integration.Client
 
         }
 
-        public static Build FromDto(Dtos.Build.Response dto)
+        public static Build FromDto(Dtos.Archived.Build.Response dto)
         {
             Build res = new Build();
             res.BuildPieces.Add(dto.Id, BuildPiece.FromDto(dto.FirstPiece, res));
 
-            foreach (Dtos.BuildPiece.Response pieceDto in dto.Pieces)
+            foreach (Dtos.Archived.BuildPiece.BuildPieceResponse pieceDto in dto.Pieces)
             {
                 res.BuildPieces.Add(pieceDto.Id, BuildPiece.FromDto(pieceDto, res));
             }

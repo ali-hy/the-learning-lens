@@ -1,4 +1,4 @@
-﻿namespace Integration.Dtos.Module
+﻿namespace Integration.Dtos.Archived.Module
 {
     public class CreateModuleRequest
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Integration.Dtos.Archived.BuildPieceSocket;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace Integration.Client
         {
         }
 
-        public static BuildPieceSocket FromDto(Dtos.BuildPieceSocket.Response dto, BuildPiece buildPiece, Build build)
+        public static BuildPieceSocket FromDto(BuildPieceSocketResponse dto, BuildPiece buildPiece, Build build)
         {
             // Get or make SocketType
             build.SocketTypes.TryGetValue(dto.Id, out PieceSocket? socketType);

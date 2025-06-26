@@ -5,6 +5,8 @@ using WebApp.Helpers;
 using WebApp.Middleware;
 using WebApp.Models;
 using WebApp.Controllers;
+using Microsoft.Extensions.FileProviders;
+using WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,7 @@ static async Task SeedRoles(IServiceProvider serviceProvider)
 {
     var roleManager = serviceProvider.GetRequiredService<RoleManager<UserRole>>();
 
-    string[] roleNames = { "Trainer", "Trainee", "Admin" };
+    string[] roleNames = ["Trainer", "Trainee", "Admin"];
     foreach (var roleName in roleNames)
     {
         var roleExists = await roleManager.RoleExistsAsync(roleName);
@@ -23,6 +25,17 @@ static async Task SeedRoles(IServiceProvider serviceProvider)
     }
 }
 
+static async Task SeedLessons(IServiceProvider serviceProvider)
+{
+    var dbContext = serviceProvider.GetRequiredService<AppDbContext>();
+    Lesson[] lessons = [new (){
+        Title="Motorcycle",
+        Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim metus, lacinia vel porta non, luctus a lacus. Duis id sem tortor. Integer metus elit, tempor vel tempor ut, egestas. ",
+        Difficulty=4,
+        Preview="/static/"
+    }];
+}
+
 // Add services to the container.
 if (builder.Configuration.GetConnectionString("DefaultConnection") is string connectionString)
     builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
@@ -30,6 +43,8 @@ else
     throw new Exception("Connection string not found in app settings");
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<ILessonService, LessonService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 
@@ -53,6 +68,7 @@ builder.Services.AddIdentity<UserAccount, UserRole>(options =>
 })
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = IdentityConstants.BearerScheme;
@@ -92,6 +108,12 @@ builder.Services.AddSwaggerGen(options =>
         });
 });
 
+// Create /static directory if it does not exist
+if (!Directory.Exists("static"))
+{
+    Directory.CreateDirectory("static");
+}
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -114,7 +136,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-};
+}
+;
 
 app.UseHttpsRedirection();
 
@@ -122,6 +145,13 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseMiddleware<UserMiddleware>();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "static")),
+    RequestPath = "/static"
+});
 
 app.MapControllers();
 

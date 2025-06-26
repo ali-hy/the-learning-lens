@@ -1,8 +1,10 @@
-﻿namespace WebApp.Forms
+﻿using Integration.Dtos.Lesson;
+
+namespace WebApp.Forms
 {
-    public class CreateLessonForm : Integration.Dtos.Lesson.CreateRequestBase
+    public class CreateLessonForm : CreateLessonRequestBase
     {
-        IFormFile Preview { get; set; } = null!;
-        IFormFile Prefab { get; set; } = null!;
+        public IFormFile Preview { get; set; } = null!;
+        public IFormFile Prefab { get; set; } = null!;
     }
 }

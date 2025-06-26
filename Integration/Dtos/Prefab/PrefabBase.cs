@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Integration.Dtos.Prefab
 {
-    public class Base
+    public class PrefabBase
     {
         public long Id { get; set; }
         public string Name { get; set; } = string.Empty;

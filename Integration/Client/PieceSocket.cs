@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Integration.Dtos.Archived.PieceSocket;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace Integration.Client
             Name = name;
         }
 
-        public static PieceSocket FromDto(Dtos.PieceSocket.Response dto)
+        public static PieceSocket FromDto(PieceSocketResponse dto)
         {
             return new PieceSocket(dto.Id, dto.Name);
         }

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Integration.Dtos.Archived.BuildPiece;
+using Integration.Dtos.Archived.BuildPieceSocket;
+using System.Collections.Generic;
 
 namespace Integration.Client
 {
@@ -17,7 +19,7 @@ namespace Integration.Client
 
         public BuildPiece(long id, Piece pieceType) : this(id, pieceType, new Dictionary<long, BuildPieceSocket>()) { }
 
-        public static BuildPiece FromDto(Dtos.BuildPiece.Response dto, Build build)
+        public static BuildPiece FromDto(BuildPieceResponse dto, Build build)
         {
             // Get or make piece type
             build.PieceTypes.TryGetValue(dto.PieceType.Id, out Piece? pieceType);
@@ -28,7 +30,7 @@ namespace Integration.Client
             build.BuildPieces.Add(res.Id, res);
 
             // Make sockets
-            foreach (Dtos.BuildPieceSocket.Response buildPieceSocketDto in dto.Sockets)
+            foreach (BuildPieceSocketResponse buildPieceSocketDto in dto.Sockets)
             {
                 var buildPieceSocket = BuildPieceSocket.FromDto(buildPieceSocketDto, res, build);
                 res.Sockets.Add(buildPieceSocket.Id, buildPieceSocket);

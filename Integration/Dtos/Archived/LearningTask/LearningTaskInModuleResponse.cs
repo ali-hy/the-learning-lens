@@ -1,4 +1,4 @@
-﻿namespace Integration.Dtos.LearningTask
+﻿namespace Integration.Dtos.Archived.LearningTask
 {
     public class LearningTaskInModuleResponse
     {

@@ -2,10 +2,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Integration.Dtos.Module;
 using WebApp.Helpers;
 using WebApp.Models;
 using WebApp.Models.Archive;
+using Integration.Dtos.Archived.Module;
 
 namespace WebApp.Controllers
 {

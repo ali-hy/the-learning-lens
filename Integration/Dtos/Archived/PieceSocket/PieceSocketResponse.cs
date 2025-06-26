@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Integration.Dtos.PieceSocket
+namespace Integration.Dtos.Archived.PieceSocket
 {
-    public class Response
+    public class PieceSocketResponse
     {
         public long Id { get; set; }
         public string Name { get; set; } = null!;

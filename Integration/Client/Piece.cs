@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Integration.Dtos.Archived.Piece;
+using Integration.Dtos.Archived.PieceSocket;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Integration.Client
 {
@@ -24,11 +21,11 @@ namespace Integration.Client
 
         public Piece(long id) : this(id, string.Empty) { }
 
-        public static Piece FromDto(Dtos.Piece.Response dto, Build build)
+        public static Piece FromDto(Dtos.Archived.Piece.PieceResponse dto, Build build)
         {
             var res = new Piece(dto.Id, dto.Name);
 
-            foreach (Dtos.PieceSocket.Response socketTypeDto in dto.Sockets)
+            foreach (PieceSocketResponse socketTypeDto in dto.Sockets)
             {
                 build.SocketTypes.TryGetValue(socketTypeDto.Id, out PieceSocket? socketType);
                 socketType ??= PieceSocket.FromDto(socketTypeDto);

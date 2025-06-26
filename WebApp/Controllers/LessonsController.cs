@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Integration.Dtos.Lesson;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApp.Forms;
 using WebApp.Helpers;
 using WebApp.Models;
+using WebApp.Services;
 
 namespace WebApp.Controllers
 {
@@ -15,22 +15,27 @@ namespace WebApp.Controllers
     public class LessonsController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
+        private readonly ILessonService _lessonService;
 
-        public LessonsController(AppDbContext context)
+        public LessonsController(AppDbContext context, IMapper mapper, ILessonService lessonService)
         {
             _context = context;
+            _mapper = mapper;
+            _lessonService = lessonService;
         }
 
         // GET: api/Lessons
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Lesson>>> GetLessons()
+        public async Task<ActionResult<IList<LessonBase>>> GetLessons()
         {
-            return await _context.Lessons.ToListAsync();
+            return await _context.Lessons
+                .ProjectTo<LessonBase>(_mapper.ConfigurationProvider)
+                .ToListAsync();
         }
 
-        // GET: api/Lessons/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Lesson>> GetLesson(long id)
+        public async Task<ActionResult<LessonBase>> GetLesson(long id)
         {
             var lesson = await _context.Lessons.FindAsync(id);
 
@@ -39,11 +44,9 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            return lesson;
+            return _mapper.Map<LessonBase>(lesson);
         }
 
-        // PUT: api/Lessons/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLesson(long id, Lesson lesson)
         {
@@ -73,18 +76,51 @@ namespace WebApp.Controllers
             return NoContent();
         }
 
-        // POST: api/Lessons
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Lesson>> PostLesson(Lesson lesson)
+        public async Task<ActionResult<Lesson>> PostLesson(CreateLessonForm formData)
         {
+            // Check if prefab is provided
+            if (formData == null)
+            {
+                return BadRequest("Lesson data is required.");
+            }
+
+            if (formData.Prefab == null || formData.Prefab.Length == 0)
+            {
+                return BadRequest("Prefab file is required.");
+            }
+
+            // Check if preview is provided
+            if (formData.Preview == null || formData.Preview.Length == 0)
+            {
+                return BadRequest("Preview file is required.");
+            }
+
+            // Validate the lesson data
+            if (string.IsNullOrWhiteSpace(formData.Title) || string.IsNullOrWhiteSpace(formData.Description))
+            {
+                return BadRequest("Title and Description are required.");
+            }
+
+            if (formData.Difficulty < 1 || formData.Difficulty > 5)
+            {
+                return BadRequest("Difficulty must be between 1 and 5.");
+            }
+
+            var lesson = _mapper.Map<Lesson>(formData);
+
+            // Save preview file
+            lesson.Preview = await _lessonService.SavePreviewFile(formData.Preview);
+
+            // Save prefab file
+            lesson.Prefab.Url = await _lessonService.SavePrefabFile(formData.Prefab);
+
             _context.Lessons.Add(lesson);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetLesson", new { id = lesson.Id }, lesson);
+            return CreatedAtAction("GetLesson", new { id = lesson.Id }, formData);
         }
 
-        // DELETE: api/Lessons/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLesson(long id)
         {
