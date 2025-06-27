@@ -30,6 +30,8 @@ public class EvaluationManager : MonoBehaviour
 
     [SerializeField] private AudioSource positiveAudio;
     [SerializeField] private AudioSource negativeAudio;
+    [SerializeField] private AudioSource endingAudio;
+    [SerializeField] private GameObject particleSystem;
 
     void Start()
     {
@@ -107,6 +109,12 @@ public class EvaluationManager : MonoBehaviour
             positiveAudio.Play();
             Debug.Log("Correct placement: " + objectName + " in " + socketName);
             Debug.Log("Progress: " + GetProgressPercentage() + "%");
+            //play ending effects
+            if(IsModelComplete())
+            {
+                endingAudio.Play();
+                particleSystem.SetActive(true);
+            }
         }
         else
         {
