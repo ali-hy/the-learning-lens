@@ -3,49 +3,49 @@ using UnityEngine.Events;
 
 public class ModelLoader : MonoBehaviour
 {
-    GameObject ReferenceModel = null;
-    GameObject BuildableModel = null;
+    GameObject referenceModel = null;
+    GameObject buildableModel = null;
 
     EvaluationManager evaluationManager = null;
     
-    public UnityEvent ModelsLoaded;
+    public UnityEvent modelsLoaded;
 
     private void Awake()
     {
         evaluationManager = FindAnyObjectByType<EvaluationManager>();
 
-        ModelsLoaded.AddListener(InstantiateModels);
-        ModelsLoaded.AddListener(evaluationManager.OnModelLoaded);
+        modelsLoaded.AddListener(InstantiateModels);
+        modelsLoaded.AddListener(evaluationManager.OnModelLoaded);
         StartCoroutine(LessonSceneLoader.LessonItem.LoadBuildableModel(SetBuildableModel));
         StartCoroutine(LessonSceneLoader.LessonItem.LoadReferenceModel(SetReferenceModel));
     }
 
     private void OnDisable()
     {
-        ModelsLoaded.RemoveAllListeners();
+        modelsLoaded.RemoveAllListeners();
     }
 
     private void InstantiateModels ()
     {
-        Instantiate(ReferenceModel, transform);
-        Instantiate(BuildableModel, transform);
+        Instantiate(referenceModel, transform);
+        Instantiate(buildableModel, transform);
     }
 
     private void SetBuildableModel (GameObject gameObject)
     {
-        BuildableModel = gameObject;
-        if (BuildableModel != null & ReferenceModel != null)
+        buildableModel = gameObject;
+        if (buildableModel != null & referenceModel != null)
         {
-            ModelsLoaded.Invoke();
+            modelsLoaded.Invoke();
         }
     }
 
     private void SetReferenceModel (GameObject gameObject)
     {
-        ReferenceModel = gameObject;
-        if (ReferenceModel != null && BuildableModel != null)
+        referenceModel = gameObject;
+        if (referenceModel != null && buildableModel != null)
         {
-            ModelsLoaded.Invoke();
+            modelsLoaded.Invoke();
         }
     }
 }

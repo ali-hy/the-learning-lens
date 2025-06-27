@@ -8,12 +8,12 @@ using UnityEngine.Networking;
 public static class Api
 {
     public static readonly string apiUrl = "https://localhost:7254/";
-    public static AuthInfo AuthInfo { get; private set; }
+    public static AuthInfo authInfo { get; private set; }
 
     private static void SetHeaders(UnityWebRequest request)
     {
-        if (AuthInfo != null)
-            request.SetRequestHeader("Authorization", AuthInfo.AccessToken);
+        if (authInfo != null)
+            request.SetRequestHeader("Authorization", authInfo.AccessToken);
     }
 
     public static UnityWebRequest PostRequest<TBody>(string endpoint, TBody body, string contentType = "application/json")

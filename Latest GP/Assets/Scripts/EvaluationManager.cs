@@ -39,28 +39,7 @@ public class EvaluationManager : MonoBehaviour
         // Count total parts if not set in inspector
         if (totalParts <= 0 || !usedProvidedPartsList)
         {
-            // Find all socket interactors in the scene
-            XRSocketInteractor[] allSockets = FindObjectsByType<XRSocketInteractor>(FindObjectsSortMode.None);
-
-            if (totalParts <= 0)
-                totalParts = allSockets.Length;
-
-            // Initialize the dictionary and part list if needed
-            foreach (XRSocketInteractor socket in allSockets)
-            {
-                string socketName = socket.gameObject.name;
-                socketStatus.Add(socketName, false);
-
-                if (!usedProvidedPartsList)
-                {
-                    // Extract expected part name from socket name
-                    string partName = GetExpectedPartName(socketName);
-                    if (!string.IsNullOrEmpty(partName))
-                    {
-                        partsInOrder.Add(partName);
-                    }
-                }
-            }
+            OnModelLoaded();
         }
         else
         {
@@ -233,9 +212,23 @@ public class EvaluationManager : MonoBehaviour
         instructionsText.text = sb.ToString();
     }
 
-    // Public method to check if model is complete
     public bool IsModelComplete()
     {
         return correctlyPlacedParts >= totalParts;
+    }
+
+    public bool OnModelComplete()
+    {
+        if (IsModelComplete())
+        {
+            Debug.Log("Model assembly complete!");
+            // Optionally trigger any completion events or UI updates here
+            return true;
+        }
+        else
+        {
+            Debug.Log("Model assembly not complete yet.");
+            return false;
+        }
     }
 }

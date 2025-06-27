@@ -19,7 +19,8 @@ public class MenuManager : MonoBehaviour
         currentActivePanel = mainMenuPanel;
 
         // Make sure only the main menu is active at start
-        mainMenuPanel.SetActive(true);
+        if (mainMenuPanel)
+            mainMenuPanel.SetActive(true);
 
         if (settingsPanel)
             settingsPanel.SetActive(false);
@@ -27,7 +28,8 @@ public class MenuManager : MonoBehaviour
         if (creditsPanel)
             creditsPanel.SetActive(false);
 
-        levelSelectPanel.SetActive(false);
+        if (levelSelectPanel)
+            levelSelectPanel.SetActive(false);
     }
 
     // Call this method to switch to a specific panel
@@ -68,21 +70,26 @@ public class MenuManager : MonoBehaviour
     {
         SwitchToPanel(levelSelectPanel);
     }
-    
+
     public void SwitchToArScene()
     {
-        LoadScene("ArScene");
+        SceneManager.LoadScene("ArScene");
     }
+    
     public void SwitchToMainScene()
     {
-        LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
+
+    // ------- Handle button clicks -------
+    // This method is called when a lesson item is clicked in the level select panel
     public void SwitchToTrainingScene(LessonItem lessonItem)
     {
-
-        LessonSceneLoader.LoadLessonScene(lessonItem, () => SceneManager.LoadScene("LessonScene"));
+        LessonSceneLoader.LessonItem = lessonItem;
+        SceneManager.LoadScene("LessonScene");
     }
 
+    // Handle login button click
     public void OnLoginBtnClicked()
     {
         GameObject form = GameObject.Find("Login Form");
@@ -94,11 +101,5 @@ public class MenuManager : MonoBehaviour
         var PasswordField = form.transform.Find("Password Field").GetComponent<TextMeshProUGUI>();
 
         StartCoroutine(Api.Login(EmailField.text, PasswordField.text, i => Debug.Log($"Logged in with {i.AccessToken}")));
-    }
-
-    // Load a scene by its name
-    public void LoadScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
     }
 }

@@ -7,7 +7,7 @@ public class LessonLoader : MonoBehaviour
     public Transform lessonsContainer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
          StartCoroutine(Api.FetchLessons(PopulateLessons));
     }

@@ -55,13 +55,13 @@ public class LessonItem : MonoBehaviour
     {
         LessonData = lesson;
 
-        TmpTitle.SetText(lesson.Title);
-        TmpDescription.SetText(lesson.Description);
+        TmpTitle.SetText(LessonData.Title);
+        TmpDescription.SetText(LessonData.Description);
 
-        if (lesson.Difficulty < DifficultySprites.Length)
-            DifficultyIndicator.sprite = DifficultySprites[lesson.Difficulty];
+        if (LessonData.Difficulty < DifficultySprites.Length)
+            DifficultyIndicator.sprite = DifficultySprites[LessonData.Difficulty];
 
-        Sprite lessonPreview = Resources.Load<Sprite>(lesson.Preview);
+        Sprite lessonPreview = Resources.Load<Sprite>(LessonData.Preview);
         if (lessonPreview != null)
             Preview.sprite = lessonPreview;
     }
