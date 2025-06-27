@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
-using Integration.Dtos.Archived.Module;
 using Integration.Dtos.Lesson;
 using Integration.Dtos.Prefab;
 using Integration.Dtos.UserAccount;
 using WebApp.Forms;
 using WebApp.Models;
-using WebApp.Models.Archive;
 
 namespace WebApp.Helpers
 {
@@ -27,14 +25,12 @@ namespace WebApp.Helpers
             CreateMap<CreateLessonForm, Lesson>()
                 .ForMember(o => o.Preview, o => o.Ignore())
                 .ForMember(o => o.Prefab, o => o.Ignore());
+
             CreateMap<Lesson, LessonBase>();
             CreateProjection<Lesson, LessonBase>();
 
             // Prefab
             CreateMap<Prefab, PrefabBase>();
-
-            // Archive
-            CreateMap<CreateModuleRequest, Module>();
         }
     }
 }

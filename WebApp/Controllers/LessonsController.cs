@@ -113,7 +113,10 @@ namespace WebApp.Controllers
             lesson.Preview = await _lessonService.SavePreviewFile(formData.Preview);
 
             // Save prefab file
-            lesson.Prefab.Url = await _lessonService.SavePrefabFile(formData.Prefab);
+            lesson.Prefab = new() { 
+                Url = await _lessonService.SavePrefabFile(formData.Prefab),
+                Name = formData.Prefab.FileName
+            };
 
             _context.Lessons.Add(lesson);
             await _context.SaveChangesAsync();

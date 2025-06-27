@@ -11,8 +11,5 @@ namespace WebApp.Models
         public string LastName { get; set; } = string.Empty;
 
         public DateOnly DOB { get; set; }
-
-        public List<UserAccount> Trainers { get; set; } = null!;
-        public List<UserAccount> Trainees { get; set; } = null!;
     }
 }

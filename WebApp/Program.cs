@@ -122,6 +122,7 @@ using (var scope = app.Services.CreateScope())
     var dbContext = services.GetService<AppDbContext>() ?? throw new NullReferenceException("DB context must not be null");
     await dbContext.Database.MigrateAsync();
     await SeedRoles(services);
+    await SeedLessons(services);
 }
 
 // Configure the HTTP request pipeline.
