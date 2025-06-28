@@ -6,9 +6,12 @@ public class MenuManager : MonoBehaviour
 {
     // References to your different menu panels
     [SerializeField] private GameObject mainMenuPanel;
-    [SerializeField] private GameObject settingsPanel;
-    [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private GameObject loginpanel;
+    [SerializeField] private GameObject signuppanel;
     [SerializeField] private GameObject levelSelectPanel;
+    [SerializeField] private GameObject lessonValidBike;
+    [SerializeField] private GameObject lessonValidWar;
+
 
     // Keep track of the currently active panel
     private GameObject currentActivePanel;
@@ -22,14 +25,20 @@ public class MenuManager : MonoBehaviour
         if (mainMenuPanel)
             mainMenuPanel.SetActive(true);
 
-        if (settingsPanel)
-            settingsPanel.SetActive(false);
+        if (loginpanel)
+            loginpanel.SetActive(false);
 
-        if (creditsPanel)
-            creditsPanel.SetActive(false);
+        if (signuppanel)
+            signuppanel.SetActive(false);
 
         if (levelSelectPanel)
             levelSelectPanel.SetActive(false);
+
+        if (lessonValidBike)  
+            lessonValidBike.SetActive(false);
+
+        if (lessonValidWar)
+            lessonValidWar.SetActive(false);
     }
 
     // Call this method to switch to a specific panel
@@ -56,14 +65,14 @@ public class MenuManager : MonoBehaviour
         SwitchToPanel(mainMenuPanel);
     }
 
-    public void ShowSettings()
+    public void ShowLogin()
     {
-        SwitchToPanel(settingsPanel);
+        SwitchToPanel(loginpanel);
     }
 
-    public void ShowCredits()
+    public void ShowSignup()
     {
-        SwitchToPanel(creditsPanel);
+        SwitchToPanel(signuppanel);
     }
 
     public void ShowLevelSelect()
@@ -71,11 +80,33 @@ public class MenuManager : MonoBehaviour
         SwitchToPanel(levelSelectPanel);
     }
 
-    public void SwitchToArScene()
+    public void ShowBikeValid()
     {
-        SceneManager.LoadScene("ArScene");
+        SwitchToPanel(lessonValidBike);
     }
-    
+
+    public void ShowWarValid()
+    {
+        SwitchToPanel(lessonValidWar);
+    }
+
+    public void SwitchToBikeLesson()
+    {
+        SceneManager.LoadScene("BikeLesson");
+    }
+    public void SwitchToBikeTest()
+    {
+        SceneManager.LoadScene("BikeTest");
+    }
+    public void SwitchToWarLesson()
+    {
+        SceneManager.LoadScene("WardrobeLesson");
+    }
+    public void SwitchToWarTest()
+    {
+        SceneManager.LoadScene("WardrobeTest");
+    }
+
     public void SwitchToMainScene()
     {
         SceneManager.LoadScene("MainMenu");

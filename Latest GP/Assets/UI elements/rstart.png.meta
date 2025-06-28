@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 78f4402eaaf5d184392aedcadeddd1ad
+guid: 1731bdd242de0ef4088242df7e90d05b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,27 +110,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: png-transparent-white-and-brown-mechanical-part-illustration-computer-icons-icon-design-settings-icon-miscellaneous-logo-website_0
+      name: rstart_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 920
-        height: 920
+        width: 348
+        height: 406
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline:
-      - - {x: 460, y: 460}
-        - {x: -460, y: 460}
-        - {x: -460, y: -460}
-        - {x: 460, y: -460}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64f8eb905420f1045aa94d381e158e68
-      internalID: 1113569411
+      spriteID: f94bec46147e72844aaaa307d0c129e2
+      internalID: -1959352901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rstart_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 348
+        height: 406
+      alignment: 9
+      pivot: {x: 0.49315938, y: 0.44722953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665d1c53a02e5a64ca7c094bccca82be
+      internalID: 630266324
       vertices: []
       indices: 
       edges: []
@@ -139,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e74e5b4bd08d2a946b2998ed2ff16b7c
+    spriteID: a4cf24e23aafe02489b829932f465122
     internalID: 0
     vertices: []
     indices: 
@@ -149,7 +167,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      png-transparent-white-and-brown-mechanical-part-illustration-computer-icons-icon-design-settings-icon-miscellaneous-logo-website_0: 1113569411
+      rstart_0: -1959352901
+      rstart_1: 630266324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

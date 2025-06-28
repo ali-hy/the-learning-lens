@@ -16,8 +16,10 @@ public class EvaluationManager : MonoBehaviour
 
     // Reference to TMP texts and slider to display progress
     [SerializeField] private TextMeshProUGUI progressText;
+    [SerializeField] private TextMeshProUGUI finalProgressText;
     [SerializeField] private TextMeshProUGUI instructionsText;
     [SerializeField] private Slider progressSlider;
+    [SerializeField] private TextMeshProUGUI Score;
 
     // Dictionary to track which sockets have correct parts
     private Dictionary<string, bool> socketStatus = new();
@@ -159,6 +161,37 @@ public class EvaluationManager : MonoBehaviour
     private float GetProgressPercentage()
     {
         return (float)correctlyPlacedParts / totalParts * 100f;
+    }
+
+    public void DisplayFinalProgress()
+    {
+        float progressPercentage = GetProgressPercentage();
+
+        // Update UI elements if they exist
+        if (finalProgressText != null)
+        {
+            finalProgressText.text = "Progress: " + progressPercentage.ToString("F1") + "%";
+        }
+    }
+
+    public void DisplayScore()
+    {
+        Score.text = CalculateScore();
+    }
+
+    public string CalculateScore()
+    {
+        
+        float progressPercentage = GetProgressPercentage();
+        if (progressPercentage>=90)
+        {
+            return "Master";
+        }
+        else if (progressPercentage>=50)
+        {
+            return "Intermediate";
+        }
+        else { return "Beginner"; }
     }
 
     private void UpdateProgressDisplay()

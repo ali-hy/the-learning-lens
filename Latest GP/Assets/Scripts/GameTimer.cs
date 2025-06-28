@@ -6,6 +6,7 @@ public class GameTimer : MonoBehaviour
 {
     [Header("Timer Display")]
     public TextMeshProUGUI timerText; // Drag your UI Text component here
+    public TextMeshProUGUI timerCurrent;
 
     [Header("Score Thresholds (in seconds)")]
     [SerializeField] private float beginnerTime = 120f; // 2 minutes
@@ -15,6 +16,10 @@ public class GameTimer : MonoBehaviour
     [Header("Timer Settings")]
     public bool startOnAwake = true;
     public bool countUp = true; // true for count up, false for countdown
+
+    [Header("Score Display")]
+    public TextMeshProUGUI score;
+
 
     // Public properties that can be accessed by other scripts
     public float CurrentTime { get; private set; }
@@ -127,6 +132,11 @@ public class GameTimer : MonoBehaviour
         return GetCurrentScore().ToString();
     }
 
+    public void DisplayScore()
+    {
+           score.text = GetScoreLevelString();
+    }
+
     public float GetTimeForLevel(ScoreLevel level)
     {
         switch (level)
@@ -136,5 +146,14 @@ public class GameTimer : MonoBehaviour
             case ScoreLevel.Master: return masterTime;
             default: return 0f;
         }
+    }
+    public void GetCurrentTime()
+    {
+        PauseTimer();
+        int minutes = Mathf.FloorToInt(CurrentTime / 60);
+        int seconds = Mathf.FloorToInt(CurrentTime % 60);
+        int milliseconds = Mathf.FloorToInt((CurrentTime * 100) % 100);
+
+        timerCurrent.text = "Play Time: " + string.Format("{0:00}:{1:00}:{2:00}", minutes, seconds, milliseconds);
     }
 }
