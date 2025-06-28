@@ -4451,7 +4451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &704313870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7112,7 +7112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1015905589
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9339,6 +9339,7 @@ GameObject:
   - component: {fileID: 1392665005}
   - component: {fileID: 1392665004}
   m_Layer: 5
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9508,7 +9509,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 189220153184704088, guid: d10faf2f376787349b6b56132ae2ce03, type: 3}
   m_PrefabInstance: {fileID: 529453827}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SignupBtn
 --- !u!1001 &1426008756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14193,8 +14193,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 540806318}
-  - {fileID: 93558043}
   - {fileID: 644519660}
+  - {fileID: 157915584}
+  - {fileID: 1431113476}
   m_Father: {fileID: 374585156}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14469,4 +14470,3 @@ SceneRoots:
   - {fileID: 1492523740}
   - {fileID: 1755530948}
   - {fileID: 399164053}
-  - {fileID: 1555948432}
