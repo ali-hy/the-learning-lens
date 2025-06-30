@@ -14375,6 +14375,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 881985712}
+    - target: {fileID: 695981021632704115, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 695981021632704115, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 706868442345989516, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -14489,6 +14497,22 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1077923240}
+    - target: {fileID: 1091469125892848315, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091469125892848315, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119374448405590728, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119374448405590728, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1196918583723356950, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: objectInfo.description
       value: 'The left engine pipe is an oil return or breather line that connects
@@ -14523,6 +14547,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 24990866}
+    - target: {fileID: 1732728954515609708, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1732728954515609708, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1777182176208280226, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -14535,10 +14567,26 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 967359801}
+    - target: {fileID: 1800674149880474358, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800674149880474358, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1837970677580738933, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 835057210}
+    - target: {fileID: 1837970677580738933, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837970677580738933, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1884475956411014378, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -14555,6 +14603,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 4458232}
+    - target: {fileID: 1958574200176975985, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958574200176975985, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1985667071965351351, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -14567,10 +14623,26 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 450028002}
+    - target: {fileID: 1997179819684629463, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997179819684629463, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2110595231269451581, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 842602340}
+    - target: {fileID: 2110595231269451581, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110595231269451581, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2173034509580963565, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -14628,10 +14700,26 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 326512885}
+    - target: {fileID: 2522788438988558904, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2522788438988558904, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2559831824145526061, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 2071652209}
+    - target: {fileID: 2559831824145526061, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559831824145526061, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2634565428466770756, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -14704,6 +14792,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1199242514}
+    - target: {fileID: 3567016625039275499, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567016625039275499, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3583141926843697475, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: objectInfo.description
       value: 'The back rim on a motorcycle is the metal ring that holds the rear
@@ -14836,6 +14932,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1696675955}
+    - target: {fileID: 4566560579804476711, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566560579804476711, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4578391770208900652, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: objectInfo.description
       value: "The middle engine pipe is a balance tube or internal oil circulation
@@ -14871,6 +14975,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 802173853}
+    - target: {fileID: 4939222920249945320, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939222920249945320, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4993227688721900729, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -15190,14 +15302,38 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1315858527}
+    - target: {fileID: 7288994575740159453, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288994575740159453, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7315461859543523741, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 140262663}
+    - target: {fileID: 7315461859543523741, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315461859543523741, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7376585094838132096, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 421782558}
+    - target: {fileID: 7376585094838132096, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376585094838132096, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7429006931060058343, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -15223,10 +15359,26 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1380640675}
+    - target: {fileID: 7638143714135943363, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638143714135943363, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7668936320817112699, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 147826992}
+    - target: {fileID: 7668936320817112699, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668936320817112699, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7679030885427000395, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15239,6 +15391,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1527494349}
+    - target: {fileID: 7686506791009945938, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686506791009945938, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7693600143146982978, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -15407,6 +15567,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1013374148}
+    - target: {fileID: 9079377613008410992, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079377613008410992, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9093858516798948909, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.49
@@ -15431,6 +15599,14 @@ PrefabInstance:
       propertyPath: infoPanel
       value: 
       objectReference: {fileID: 1534921004}
+    - target: {fileID: 9177394256154651699, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9177394256154651699, guid: 22a8455b80ffa564380c9ee0c5bcad4f, type: 3}
+      propertyPath: panelDisplayDuration
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

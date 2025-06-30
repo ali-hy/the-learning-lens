@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/BikeLesson.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/ArScene.unity
-    guid: ea34519fe86ee8342b9b3667bbaf5830
+    path: Assets/Scenes/BikeTest.unity
+    guid: 78ba1d6ca51f9e249a0b9926e74ff238
+  - enabled: 1
+    path: Assets/Scenes/WardrobeLesson.unity
+    guid: 62236a4fd4f36d84d924c6c88f341b0a
+  - enabled: 1
+    path: Assets/Scenes/WardrobeTest.unity
+    guid: d6c62666abe16b94a8812c54c13f33d3
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 07e220197e7aee54e9ce682fad957145, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 7c76f648b55a38c499de76affc4ae3d0, type: 2}
