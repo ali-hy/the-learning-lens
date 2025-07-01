@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 
 public static class Api
 {
-    public static readonly string apiUrl = "https://localhost:7254/";
+    public static readonly string apiUrl = "https://localhost:7254/api/";
     public static AuthInfo authInfo { get; private set; }
 
     private static void SetHeaders(UnityWebRequest request)

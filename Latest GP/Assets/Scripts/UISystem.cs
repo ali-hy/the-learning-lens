@@ -128,9 +128,10 @@ public class MenuManager : MonoBehaviour
         if (form != null)
             throw new System.Exception("Login Form not found");
 
-        var EmailField = form.transform.Find("Email Field").GetComponent<TextMeshProUGUI>();
-        var PasswordField = form.transform.Find("Password Field").GetComponent<TextMeshProUGUI>();
+        var EmailField = form.transform.Find("Email Field").GetComponent<TMP_InputField>();
+        var PasswordField = form.transform.Find("Password Field").GetComponent<TMP_InputField>();
 
+        Debug.Log($"Logging in with Email: {EmailField.text} and Password: {PasswordField.text}");
         StartCoroutine(Api.Login(EmailField.text, PasswordField.text, i => Debug.Log($"Logged in with {i.AccessToken}")));
     }
 }

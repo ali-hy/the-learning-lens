@@ -17,7 +17,19 @@ MonoBehaviour:
     scenePath: Assets/Scenes/MainMenu.unity
     savedColor: {r: 0, g: 0, b: 0, a: 0}
     isHeader: 0
+  - sceneName: BikeLesson
+    scenePath: Assets/Scenes/BikeLesson.unity
+    savedColor: {r: 0, g: 0, b: 0, a: 0}
+    isHeader: 0
+  - sceneName: BikeTest
+    scenePath: Assets/Scenes/BikeTest.unity
+    savedColor: {r: 0, g: 0, b: 0, a: 0}
+    isHeader: 0
   - sceneName: LessonScene
     scenePath: Assets/Scenes/LessonScene.unity
+    savedColor: {r: 0, g: 0, b: 0, a: 0}
+    isHeader: 0
+  - sceneName: TestScene
+    scenePath: Assets/Scenes/TestScene.unity
     savedColor: {r: 0, g: 0, b: 0, a: 0}
     isHeader: 0
