@@ -1,32 +1,36 @@
-# The Learning Lens: Immersive Training Suite
+# The Learning Lens: Generic XR Assembly Training Framework
 
-> **Transforming vocational training with Virtual Reality, Mixed Reality, and AI-driven Evaluation.**
+> **A modular framework for procedural skill acquisition—transforming assembly training in Industry, Healthcare, and Education via Virtual & Mixed Reality.**
+
+![Project Banner](assets/project-banner.jpg)
 
 ## 📖 Project Overview
-**The Learning Lens** is a graduation project designed to revolutionize how industrial assembly skills are taught and assessed. In traditional settings, training beginners on complex machinery (like motorcycles) is expensive, dangerous, and requires constant human supervision. 
+**The Learning Lens** is a graduation project designed to revolutionize how procedural assembly tasks are taught and assessed. [cite_start]In traditional settings, training beginners on complex machinery (like motorcycles) is expensive, dangerous, and requires constant human supervision[cite: 122, 124].
 
-Our solution bridges this gap by creating a safe, immersive **Virtual Reality (VR)** environment for learning and a **Mixed Reality (AR)** mode for real-world assessment. The system uniquely integrates an **AI Vision Module** that can grade a user's physical assembly quality from a single photo, eliminating the need for a human supervisor.
+We created a **generic XR framework** capable of training users on *any* assembly sequence. Whether it is a **mechanic assembling an engine**, a **medical student assembling a surgical kit**, or a **child building a LEGO set**, the system adapts to the content. It uniquely integrates an **AI Vision Module** that can grade a user's real-world assembly quality from a single photo, eliminating the need for a human supervisor.
 
 ### 🌟 Key Features
+* **Universal Assembly Framework:**
+    * Designed as a modular platform where training content (3D models, step-by-step logic) is decoupled from the core system.
+    * **Proven Use Cases:** We demonstrated this versatility by implementing modules for **Automotive Assembly (Motorcycle)**, **Carpentry (Wardrobe)**, and **Gamified STEM Training (LEGO)**.
 * **Dual-Mode Training:**
-    * **VR Mode (Meta Quest 2/3):** A fully immersive workshop where users learn to assemble complex 3D models (Motorcycles, Wardrobes) with haptic feedback, snapping mechanics, and step-by-step guidance.
-    * **MR Mode (Meta Quest 3):** Uses passthrough technology to guide users in assembling physical objects (e.g., LEGO models) in the real world.
-* **AI-Powered Assessment:** A custom Python backend using **LPIPS** (Learned Perceptual Image Patch Similarity) to detect errors—such as missing parts—with human-like perception.
-* **Smart Backend:** An ASP.NET Core system that tracks user progress, manages lessons, and stores performance metrics in SQL Server.
-* **Gamified Learning:** Includes "Lesson Mode" for guided tutorials and "Test Mode" for high-pressure, unassisted evaluation.
+    * [cite_start]**VR Mode (Meta Quest 2/3):** A fully immersive environment for safe, repeatable practice of complex assembly tasks with haptic feedback and guidance[cite: 527].
+    * [cite_start]**MR Mode (Meta Quest 3):** Uses passthrough technology to overlay digital guides onto the real world, allowing users to practice assembly with physical objects[cite: 951].
+* [cite_start]**AI-Powered Assessment:** A custom Python backend using **LPIPS** (Learned Perceptual Image Patch Similarity) to detect assembly errors—such as missing parts—with human-like perception[cite: 1048, 1057].
+* [cite_start]**Smart Backend:** An ASP.NET Core system that tracks user progress across different assembly domains and stores performance metrics in SQL Server[cite: 512].
 
 ## 🛠️ Technical Architecture
-The system follows a scalable 3-Tier Architecture:
+[cite_start]The system follows a scalable 3-Tier Architecture[cite: 486]:
 
-1.  **Presentation Layer (Unity):** Handles XR interactions (VR/AR), utilizing the **Meta XR Core SDK** and **XR Interaction Toolkit** for cross-platform support.
-2.  **Logic Layer (ASP.NET Core):** Manages authentication (Identity), business logic, and serves a RESTful API.
-3.  **Data Layer (SQL Server):** Uses Entity Framework Core for persisting user profiles, lesson data, and assessment scores.
+1.  [cite_start]**Presentation Layer (Unity):** Handles XR interactions (VR/AR), utilizing the **Meta XR Core SDK** and **XR Interaction Toolkit** for cross-platform support[cite: 947, 950].
+2.  [cite_start]**Logic Layer (ASP.NET Core):** Manages authentication (Identity), generic lesson logic, and serves a RESTful API[cite: 961, 965].
+3.  [cite_start]**Data Layer (SQL Server):** Uses Entity Framework Core for persisting user profiles, generic lesson data, and assessment scores[cite: 987].
 
 ### 🤖 AI Evaluation Module: The LPIPS Pivot
-One of our biggest technical challenges was grading the AR builds. We initially attempted **3D Reconstruction (Pix2Vox)** to recreate the user's object in 3D, but it proved unreliable for small, detailed parts.
+One of our biggest technical challenges was grading real-world builds without human intervention. [cite_start]We initially attempted **3D Reconstruction (Pix2Vox)** but found it unreliable for detailed parts[cite: 1009].
 
-**The Solution:** We pivoted to a vision-based approach using **OpenCV** and **LPIPS**. Unlike traditional metrics like SSIM (which failed due to lighting changes), LPIPS uses deep learning features to "perceive" the image.
-* **Result:** The system can accurately identify a missing headlight or misplaced brick while ignoring environmental noise like shadows or slight camera shifts.
+**The Solution:** We pivoted to a vision-based approach using **OpenCV** and **LPIPS**. Unlike traditional metrics like SSIM, LPIPS uses deep learning features to "perceive" the image.
+* [cite_start]**Result:** The system accurately identified missing parts (like a LEGO headlight) while ignoring environmental noise, proving the viability of automated grading for physical assembly tasks[cite: 1071].
 
 | Metric | SSIM (Traditional) | LPIPS (Our Solution) |
 | :--- | :--- | :--- |
@@ -45,7 +49,7 @@ The Learning Lens consists of three fully developed standalone modules:
 > **⚠️ Integration Disclaimer:** For the purpose of our final demonstration, the real-time "bridge" between the Meta Quest 3 client and the Python evaluation script is simulated. While both systems work perfectly independently, the automated pipeline triggering the script from the headset is currently mocked with placeholder triggers. Future work includes finalizing this API handshake for a seamless end-to-end experience.
 
 ## 📊 Performance & Results
-We conducted on-campus user testing with real students. The system received a **System Usability Scale (SUS) score of 74.8%**, categorizing the user experience as **"Very Good"**. 
+We conducted on-campus user testing with real students. [cite_start]The system received a **System Usability Scale (SUS) score of 74.8%**, categorizing the user experience as **"Very Good"**[cite: 43].
 
 **UEQ (User Experience Questionnaire) Highlights:**
 * **Efficiency:** 0.86 (High efficiency in task completion)
@@ -53,7 +57,7 @@ We conducted on-campus user testing with real students. The system received a **
 * **Novelty:** 0.70 (Users found the concept innovative)
 
 ## 🎥 Video Demos
-Watch the full demonstrations of the VR Motorcycle, Wardrobe, and Mixed Reality modes here:
+Watch the full demonstrations of the platform applied to different assembly domains:
 
 [**📺 Watch the Full YouTube Playlist**](https://www.youtube.com/playlist?list=PLxwu6CspzTKTWZwrkIClWTBr3Si2u0tnv)
 
@@ -65,7 +69,7 @@ To install and use the VR/AR Educational System on your Meta Quest, follow the i
 * **Meta Quest Developer Hub (MQDH)** or **SideQuest** installed on your PC.
 * USB-C Cable for connection.
 
-### Installation Steps
+### [cite_start]Installation Steps[cite: 1076]
 
 **Step 1: Obtain the APK**
 Since there is no pre-built release, clone this repository and build the project using Unity to generate the `.apk` file.
@@ -87,7 +91,7 @@ You can use either **MQDH** or **SideQuest**:
 4.  Locate and launch **The Learning Lens**.
 
 ## 👥 The Team
-This project was built by a dedicated team of seniors from the Faculty of Computer and Information Sciences, Ain Shams University.
+[cite_start]This project was built by a dedicated team of seniors from the Faculty of Computer and Information Sciences, Ain Shams University[cite: 1, 6, 7].
 
 * **Mahmoud Hany Mazroa**
 * **Ali Haitham Youssef**
@@ -95,7 +99,7 @@ This project was built by a dedicated team of seniors from the Faculty of Comput
 * **Mohamed Shokry Mostafa**
 * **Mahmoud Sayed Abdein**
 
-### 🎓 Supervision
+### [cite_start]🎓 Supervision[cite: 8, 11]
 * **Supervisor:** Prof./Dr. Sherin Rady
 * **Technical Guidance:** TA. Yomna Ahmed
 
