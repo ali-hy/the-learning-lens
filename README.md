@@ -2,7 +2,7 @@
 
 > **A modular framework for procedural skill acquisition—transforming assembly training in Industry, Healthcare, and Education via Virtual & Mixed Reality.**
 
-![Project Banner](Banner.jpg)
+![Project Banner](Banner.png)
 
 ### 📚 Project Resources
 * **📄 [Full Documentation (100-page PDF)](The_Learning_Lens_Documentation.pdf)** – *Deep dive into architecture, research, and testing.*
