@@ -4,7 +4,7 @@
 
 
 ### 📚 Project Resources
-* **📄 [Full Documentation (100-page PDF)](The_Learning_Lens_Documentation.pdf)** – *Deep dive into architecture, research, and testing.*
+* **📄 [Full Documentation (100-page PDF)](Documentation_TheLearningLens.pdf)** – *Deep dive into architecture, research, and testing.*
 * **📊 [Project Presentation (Canva Slides)](https://www.canva.com/design/DAGrz5shPyM/mQjDjJBTeRXanVuNYnrj-g/view)** – *High-level overview, visual pitch, and business potential.*
 
 ---
