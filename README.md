@@ -2,7 +2,6 @@
 
 > **A modular framework for procedural skill acquisition—transforming assembly training in Industry, Healthcare, and Education via Virtual & Mixed Reality.**
 
-![Project Banner](assets/project-banner.jpg)
 
 ## 📖 Project Overview
 **The Learning Lens** is a graduation project designed to revolutionize how procedural assembly tasks are taught and assessed. [cite_start]In traditional settings, training beginners on complex machinery (like motorcycles) is expensive, dangerous, and requires constant human supervision[cite: 122, 124].
