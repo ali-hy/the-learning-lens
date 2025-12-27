@@ -1,4 +1,4 @@
-# The Learning Lens: Immersive Industrial Training Suite
+# The Learning Lens: Immersive Training Suite
 
 > **Transforming vocational training with Virtual Reality, Mixed Reality, and AI-driven Evaluation.**
 
